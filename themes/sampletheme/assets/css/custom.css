@@ -1,0 +1,10 @@
+h1,h2 {
+    color: red;
+    margin: 10px;
+}
+/* 
+h1 .entry-title, 
+h2 .entry-title {
+    color: blue;
+    margin: 10px;
+} */
