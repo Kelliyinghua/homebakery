@@ -71,18 +71,6 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		// add_theme_support(
-		// 	'custom-background',
-		// 	apply_filters(
-		// 		'sampletheme_custom_background_args',
-		// 		array(
-		// 			'default-color' => 'ffffff',
-		// 			'default-image' => '',
-		// 		)
-		// 	)
-		// );
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -139,14 +127,26 @@ add_action( 'widgets_init', 'sampletheme_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function sampletheme_scripts() {
-	wp_enqueue_style( 'sampletheme-style', get_stylesheet_uri(), array(), _S_VERSION );
+	function sampletheme_scripts() {
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+		$primary_style = "sampletheme-style";
+
+		wp_enqueue_style( $primary_style, get_stylesheet_uri(), array(), _S_VERSION );
+
+		wp_enqueue_style( 'foundation-style',
+		get_stylesheet_directory_uri(), '/assets/css/vender/foundation.css'
+		);
+
+		wp_enqueue_style( 'custom-style',
+		get_stylesheet_directory_uri(), '/assets/css/custom.css',
+		array($primary_style)
+		);
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 	}
-}
-add_action( 'wp_enqueue_scripts', 'sampletheme_scripts' );
+	add_action( 'wp_enqueue_scripts', 'sampletheme_scripts' );
 
 /**
  * Custom template tags for this theme.
@@ -162,6 +162,3 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-
-
