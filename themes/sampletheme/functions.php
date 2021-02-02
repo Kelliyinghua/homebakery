@@ -129,18 +129,13 @@ add_action( 'widgets_init', 'sampletheme_widgets_init' );
  */
 	function sampletheme_scripts() {
 
-		$primary_style = "sampletheme-style";
+		$primary_style = 'sampletheme-style';
 
 		wp_enqueue_style( $primary_style, get_stylesheet_uri(), array(), _S_VERSION );
 
-		wp_enqueue_style( 'foundation-style',
-		get_stylesheet_directory_uri(), '/assets/css/vender/foundation.css'
-		);
+		wp_enqueue_style( 'foundation-style', get_stylesheet_directory_uri(). '/assets/css/vender/foundation.css');
 
-		wp_enqueue_style( 'custom-style',
-		get_stylesheet_directory_uri(), '/assets/css/custom.css',
-		array($primary_style)
-		);
+		wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri(). '/assets/css/custom.css', array($primary_style));
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
