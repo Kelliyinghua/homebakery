@@ -1,0 +1,39 @@
+/* .is-style-fancy-quote {
+    color: blue;
+} */
+
+.wp-block-quote,
+.wp-block-quote.is-style-default {
+    color: green;
+}
+
+.wp-block-quote.is-style-fancy-quote {
+    color: blueviolet;
+}
+
+.is-style-fancy-button {
+    border-radius: 20px;
+    background: rgb(255, 204, 0);
+    color:black;
+    font-style: italic;
+    font-weight: 600;
+} 
+
+.wp-block-buttons .wp-block-button .wp-block-button__link {
+    background: rgb(255, 204, 0);
+    color: black;
+    
+}
+
+.alignwide {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.has-magenta-background-color {
+    background-color: #a156b4;
+}
+ 
+.has-magenta-color {
+    color: #a156b4;
+}

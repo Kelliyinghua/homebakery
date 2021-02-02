@@ -88,6 +88,64 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		/**
+		 * Addd suppoty for block style
+		 */
+		// add_theme_support( 'wp-block-styles' );
+		add_theme_support( 'align-wide' );
+
+		/**
+		 * Add Colour Palette
+		 */
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name' => esc_attr__( 'Magenta', 'sampletheme' ),
+				'slug' => 'magenta',
+				'color' => '#a156b4',
+			)
+		) );
+
+		/**
+		 * Add support to disable custom font size
+		 */
+		add_theme_support( 'disable-custom-font-sizes' );
+		/**
+		 * Add support to disable custom color
+		 */
+		add_theme_support( 'disable-custom-colors' );
+
+		/**
+		 * Add support for font size
+		 * 
+		 */
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+				'name' => esc_attr__( 'Small', 'themeLangDomain' ),
+				'size' => 12,
+				'slug' => 'small'
+			),
+			array(
+				'name' => esc_attr__( 'Regular', 'themeLangDomain' ),
+				'size' => 16,
+				'slug' => 'regular'
+			),
+			array(
+				'name' => esc_attr__( 'Large', 'themeLangDomain' ),
+				'size' => 36,
+				'slug' => 'large'
+			)
+		) );
+
+		/**
+		 * Disabling the default block patterns
+		 */
+		remove_theme_support( 'core-block-patterns' );
+		
+		/**
+		 * Responsive embedded content
+		 */
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'sampletheme_setup' );
@@ -132,10 +190,12 @@ add_action( 'widgets_init', 'sampletheme_widgets_init' );
 		$primary_style = 'sampletheme-style';
 
 		wp_enqueue_style( $primary_style, get_stylesheet_uri(), array(), _S_VERSION );
-
-		wp_enqueue_style( 'foundation-style', get_stylesheet_directory_uri(). '/assets/css/vender/foundation.css');
-
-		wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri(). '/assets/css/custom.css', array($primary_style));
+		
+		//Enqueue Foundation
+		wp_enqueue_style( 'foundation-style', get_stylesheet_directory_uri() . '/assets/css/vender/foundation.css');
+		wp_enqueue_script('foundation-script', get_stylesheet_directory_uri() . '/assets/js/vender/foundation.js', array(), false, true);
+		// Enqueue custom css style sheet
+		wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/assets/css/custom.css', array($primary_style));
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -157,3 +217,31 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Enqueinng block editor assets
+ */
+function sampletheme_enqueue_block_editor_assets() {
+	wp_enqueue_script(
+		'editor-script',
+		get_template_directory_uri() . '/assets/js/editor.js',
+		array(
+			'wp-blocks',
+			'wp-dom-ready', 
+			'wp-edit-post'
+		)
+	);
+}
+add_action('enqueue_block_editor_assets','sampletheme_enqueue_block_editor_assets');
+
+/**
+ * Enqueinng block assets which will load on front-end and back-end 
+ */
+
+function sampletheme_enqueue_block_assets() {
+	wp_enqueue_style(
+		'blocks-style',
+		get_template_directory_uri() . '/assets/css/blocks.css',
+	);
+}
+add_action('enqueue_block_assets' , 'sampletheme_enqueue_block_assets');
