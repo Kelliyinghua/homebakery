@@ -1,10 +1,67 @@
-h1,h2 {
-    color: blue;
-    margin: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Lobster+Two&display=swap');
+
+
+.header-title, h1 {
+    color: rgb(67, 52, 54);
+    margin: 5rem 0 2rem 1rem;
+    font-family: 'Cormorant', serif;
+
 }
 
-/* h1 .entry-title, 
-h2 .entry-title {
-    color: blue;
-    margin: 10px;
-} */
+.header-title p {
+    font-family: 'Lobster Two', cursive;
+    margin: -1rem 0 0 1rem;
+}
+
+.site-header {
+    background: rgb(148, 125, 128);
+}
+
+.custom-logo {
+    padding: 1rem;
+}
+
+.headerimg {
+    /* width: 10rem; */
+    height: 17rem;
+    background-image: url(../img/closeup-shot-of-chocolate-chip-cookie-isolated.png);
+    margin: 0;
+    margin-right: -4rem;
+    /* padding: 1rem; */
+} 
+
+
+.site-footer {
+    background: rgb(67, 52, 54);
+    color: white;
+    padding-top: 2.3rem;
+}
+
+.site-info {
+    background: rgb(20,20,20);
+    padding: 1.5rem 2rem;
+    margin-top: 5rem;
+}
+
+.site-title {
+    margin-top: 5rem;
+}
+
+.menu a, .menu .button {
+    font-size: 1.3rem;
+    font-family: 'Cormorant', serif;
+    padding: 1rem 2rem;
+    color:rgb(67, 52, 54);
+    margin-top: 1.2rem;
+}
+
+.menu a:hover, .menu .button:hover {
+    background: rgb(67, 52, 54);
+    color: white;
+    font-weight: 700;
+
+}
+
+footer {
+    height:20rem;
+}

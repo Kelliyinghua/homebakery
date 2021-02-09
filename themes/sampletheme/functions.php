@@ -47,12 +47,29 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		function sampletheme_menus() {
+
+			$locations = array(
+				'menu-primary'  => esc_html__( 'Desktop Horizontal Menu', 'sampletheme' ),
+				'expanded' => esc_html__( 'Desktop Expanded Menu', 'sampletheme' ),
+				'mobile'   => esc_html__( 'Mobile Menu', 'sampletheme' ),
+				'footer'   => esc_html__( 'Footer Menu', 'sampletheme' ),
+				'social'   => esc_html__( 'Social Menu', 'sampletheme' ),
+			);
+		
+			register_nav_menus( $locations );
+		}
+		add_action( 'init', 'sampletheme_menus' );
+
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu-primary' => esc_html__( 'Primary', 'sampletheme' ),
-			)
-		);
+		// register_nav_menus(
+		// 	array(
+		// 		'menu-primary' => esc_html__( 'Primary', 'sampletheme' ),
+		// 	),
+		// 	array(
+		// 		'footer'   => esc_html__( 'Footer Menu', 'sampletheme' ),
+		// 	)
+		// );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -90,7 +107,7 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 		);
 
 		/**
-		 * Addd suppoty for block style
+		 * Addd support for block style
 		 */
 		// add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'align-wide' );
@@ -100,20 +117,27 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 		 */
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name' => esc_attr__( 'Magenta', 'sampletheme' ),
-				'slug' => 'magenta',
-				'color' => '#a156b4',
+				'name' => esc_attr__( 'Pink', 'sampletheme' ),
+				'slug' => 'pink',
+				'color' => '#FCF0F0',
+			),
+			array(
+				'name' => esc_attr__( 'Brown', 'sampletheme' ),
+				'slug' => 'brown',
+				'color' => '#615156',
+			),
+			array(
+				'name' => esc_attr__( 'Pinkyish Brown', 'sampletheme' ),
+				'slug' => 'pinkish brownn',
+				'color' => '#564854',
+			),
+			array(
+				'name' => esc_attr__( 'Rose Gold', 'sampletheme' ),
+				'slug' => 'rose gold',
+				'color' => '#e79d71',
 			)
+			
 		) );
-
-		/**
-		 * Add support to disable custom font size
-		 */
-		add_theme_support( 'disable-custom-font-sizes' );
-		/**
-		 * Add support to disable custom color
-		 */
-		add_theme_support( 'disable-custom-colors' );
 
 		/**
 		 * Add support for font size
@@ -121,21 +145,26 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 		 */
 		add_theme_support( 'editor-font-sizes', array(
 			array(
-				'name' => esc_attr__( 'Small', 'themeLangDomain' ),
+				'name' => esc_attr__( 'Small', 'sampletheme' ),
 				'size' => 12,
 				'slug' => 'small'
 			),
 			array(
-				'name' => esc_attr__( 'Regular', 'themeLangDomain' ),
+				'name' => esc_attr__( 'Regular', 'sampletheme' ),
 				'size' => 16,
 				'slug' => 'regular'
 			),
 			array(
-				'name' => esc_attr__( 'Large', 'themeLangDomain' ),
+				'name' => esc_attr__( 'Large', 'sampletheme' ),
 				'size' => 36,
 				'slug' => 'large'
 			)
 		) );
+		/**
+		 * Supporting custom line heights
+		 */
+
+		add_theme_support( 'custom-line-height' );
 
 		/**
 		 * Disabling the default block patterns

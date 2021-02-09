@@ -26,12 +26,12 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'sampletheme' ); ?></a>
 
 	<header id="masthead" class="site-header">
-	<div class="grid-container">
-		<div class="grid-x">
-			<div class="cell shrink">
-				<div class="site-branding">
+		<div class="grid-x grid-padding-x">
+			<div class="cell small-3 medium-2 large-2">
+				<div class="site-branding small-5 large-4">
 					<?php
-					the_custom_logo();
+					the_custom_logo(); ?>
+					<!-- <?php
 					if ( is_front_page() && is_home() ) :
 						?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -45,12 +45,14 @@
 					if ( $sampletheme_description || is_customize_preview() ) :
 						?>
 						<p class="site-description"><?php echo $sampletheme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-					<?php endif; ?>
+					<?php endif; ?> -->
+
 				</div><!-- .site-branding -->
 			</div>
-			<div class="cell auto">
+			
+			<div class="cell small-6 small-offset-1 medium-8 medium-offset-2 large-offset-5 large-5">
 					<nav id="site-navigation" class="main-navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sampletheme' ); ?></button>
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'sampletheme' ); ?></button>
 						<?php
 						wp_nav_menu(
 							array(
@@ -61,8 +63,18 @@
 						?>
 					</nav><!-- #site-navigation -->
 			</div>
+			<div class="cell large-6 small-6">
+				<div class="header-title">
+					<h1>HomeBakery</h1>
+					<p>Homemade Sweet Treats, Fresh Brewed Coffee, Delight Lunch, Catering. </p>
+				</div>
+			</div>
+			<div class="cell large-6 small-6">
+				<div class="headerimg">
+					<!-- <img src="./assets/img/home-hero.jpg" alt="header-image"> -->
+				</div>
+			</div>
 		</div>
-	</div>
 
 		
 
