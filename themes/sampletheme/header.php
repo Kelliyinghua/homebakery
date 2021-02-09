@@ -50,7 +50,7 @@
 				</div><!-- .site-branding -->
 			</div>
 			
-			<div class="cell small-6 small-offset-1 medium-8 medium-offset-2 large-offset-5 large-5">
+			<div class="cell small-6 small-offset-1 medium-8 medium-offset-2 large-offset-2 large-8">
 					<nav id="site-navigation" class="main-navigation">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'sampletheme' ); ?></button>
 						<?php

@@ -62,14 +62,14 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 		add_action( 'init', 'sampletheme_menus' );
 
 		// This theme uses wp_nav_menu() in one location.
-		// register_nav_menus(
-		// 	array(
-		// 		'menu-primary' => esc_html__( 'Primary', 'sampletheme' ),
-		// 	),
-		// 	array(
-		// 		'footer'   => esc_html__( 'Footer Menu', 'sampletheme' ),
-		// 	)
-		// );
+			// register_nav_menus(
+			// 	array(
+			// 		'menu-primary' => esc_html__( 'Primary', 'sampletheme' ),
+			// 	),
+			// 	array(
+			// 		'footer'   => esc_html__( 'Footer Menu', 'sampletheme' ),
+			// 	)
+			// );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

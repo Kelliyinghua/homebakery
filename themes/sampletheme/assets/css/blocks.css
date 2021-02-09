@@ -104,10 +104,24 @@
     color:rgb(48, 36, 38);
 }
 
-.is-style-fancy-calender {
-    font-family: 'Cormorant', serif; 
+
+.is-style-fancy-archives  {
+    width: 70vw;
+    color:rgb(48, 36, 38);
 }
 
+.is-style-fancy-calendar .block-editor-block-list__block .editor-styles-wrapper,
+.is-style-fancy-search{
+    font-family: 'Cormorant', serif; 
+    color:rgb(48, 36, 38);  
+    font-size: 18px;
+}
+.is-style-fancy-search > .components-resizable-box__container .has-show-handle .wp-block-search__inside-wrapper > input {
+    border-radius: 2px;
+    border: 1px solid #949494;
+    font-size: 13px;
+    background-color: #FCF0F0;
+}
 
 .alignwide {
     max-width: 80%;

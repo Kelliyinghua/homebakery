@@ -145,9 +145,13 @@ wp.blocks.registerBlockStyle(
         label: 'Fancy Calendar'
     } 
 );
-
-
-
+wp.blocks.registerBlockStyle( 
+    'core/search', 
+    {
+        name: 'fancy-search',
+        label: 'Fancy Search'
+    } 
+);
 
 
 
