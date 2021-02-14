@@ -63,17 +63,6 @@
 						?>
 					</nav><!-- #site-navigation -->
 			</div>
-			<div class="cell large-6 small-6">
-				<div class="header-title">
-					<h1>HomeBakery</h1>
-					<p>Homemade Sweet Treats, Fresh Brewed Coffee, Delight Lunch, Catering. </p>
-				</div>
-			</div>
-			<div class="cell large-6 small-6">
-				<div class="headerimg">
-					<!-- <img src="./assets/img/home-hero.jpg" alt="header-image"> -->
-				</div>
-			</div>
 		</div>
 
 		
@@ -81,4 +70,4 @@
 		
 	</header><!-- #masthead -->
 
-	<div class="grid-container">
+	<div class="grid-x">

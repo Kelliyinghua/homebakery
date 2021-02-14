@@ -30,9 +30,9 @@
 }
 
 .is-style-fancy-code, .is-style-fancy-shortcode {
-    background-color: rgb(20,20,20);
-    color: whitesmoke;
+    color: rgb(48, 36, 38);
     border: lightgray 1px solid;
+    margin: 2rem 4rem;
 }
 
 .is-style-fancy-preformatted {
