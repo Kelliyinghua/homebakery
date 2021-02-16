@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Lobster+Two&display=swap');
 
+body {
+    margin-bottom: 0 !important;
+}
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: 'Cormorant', serif; 
     color: rgb(67, 52, 54);  
@@ -85,3 +89,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-left: 3rem;
 }
 
+
+/* footer */
+
+
+
+.footer-title {
+    color: white;
+}
+
+.menu-social-menu-container > #social > .menu-item > a {
+    margin-top: 0;
+}
