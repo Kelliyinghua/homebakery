@@ -50,7 +50,7 @@
 				</div><!-- .site-branding -->
 			</div>
 			
-			<div class="cell small-6 small-offset-1 medium-8 medium-offset-2 large-offset-2 large-8">
+			<div class="cell small-6 small-offset-1 medium-8 medium-offset-2 large-offset-4 large-6">
 					<nav id="site-navigation" class="main-navigation">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'sampletheme' ); ?></button>
 						<?php
@@ -63,11 +63,30 @@
 						?>
 					</nav><!-- #site-navigation -->
 			</div>
+			
 		</div>
+		<div class="grid-x">	
+			<div class="cell large-6 small-6">
+				<?php the_title( '<h1 class="entry-title entry-title-block-style">', '</h1>' ); ?>
+				<p class="entry-title-block-style">Homemade Sweet Treats, Fresh Brewed Coffee, Delight Lunch, Catering. </p>
+			</div>
+			
+			<div class="callout large-4 large-offset-2 small-6">
+				<?php if ( get_header_image() ) : ?>
+					<div id="site-header">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php header_image(); ?>" width="220" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						</a>
+					</div>
+				<?php endif; ?>		
+			</div>
+		</div>
+
+		
 
 		
 
 		
 	</header><!-- #masthead -->
 
-	<div class="grid-x">
+	<div class="grid-container">
