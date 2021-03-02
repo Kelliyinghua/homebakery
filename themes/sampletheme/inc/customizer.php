@@ -41,7 +41,7 @@ function sampletheme_customize_register( $wp_customize ) {
 		$wp_customize->add_section(
 			'social_media',
 			array(
-				'title' => 'Facebook Link',
+				'title' => 'Social Media Links',
 				'capability' => 'edit_theme_options',
 				// 'panel' => 'social media',
 			));
@@ -56,6 +56,20 @@ function sampletheme_customize_register( $wp_customize ) {
 			'facebook_url',
 			array(
 				'label' => 'Facebook URL',
+				'section' => 'social_media',
+				'setting' => 'facebook_url',
+			));
+		$wp_customize->add_setting(
+			'twitter_url',
+			array(
+				'default' => '',
+				'transport' => 'refresh',
+			));
+		
+		$wp_customize->add_control(
+			'twitter_url',
+			array(
+				'label' => 'Twitter URL',
 				'section' => 'social_media',
 				'setting' => 'facebook_url',
 			));

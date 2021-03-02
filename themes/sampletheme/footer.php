@@ -15,7 +15,7 @@
 		<div class="grid-x cell large-12 small-12">
 			<div class="callout large-3 medium-6">
 				<div id="footer-img">
-					
+					<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?> ./assets/img/home-hero.jpg" alt="hero"> -->
 				</div>
 			</div>
 			<div class="cell large-3 medium-6">
@@ -61,7 +61,7 @@
 					}
 					?>
 				</div>
-				<?php if (get_theme_mod('facebook_url')){ ?>
+				<?php if (get_theme_mod('facebook_url')) { ?>
 				<a class="facebook-link" href="<?php echo get_theme_mod('facebook_url');?>">Facebook</a>	
 				<?php } ?>
 			</div>
