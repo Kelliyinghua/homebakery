@@ -21,6 +21,10 @@ a:visited {
     margin-top: 1rem;
 }
 
+.site-title a {
+    color:rgb(67, 52, 54);
+}
+
 #page {
     background-color: #F0F0F0;
 }
@@ -227,3 +231,16 @@ a:visited {
     padding: 1rem 7rem 2rem 7rem;
     text-align: center;
 }
+
+/* Login page */
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+    
+    background:rgba(256,256,256,0.8);   
+
+}
+
+.woocommerce form .form-row label {
+    font-family: 'Cormorant', serif; 
+    font-size: 1.3rem;
+}
+    

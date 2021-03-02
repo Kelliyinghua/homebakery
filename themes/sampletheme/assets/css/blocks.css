@@ -135,3 +135,7 @@
 .has-brown-color {
     color: rgb(67, 52, 54);
 }
+
+/* .wp-block[data-align|=wide] {
+    max-width: 80rem;
+} */
