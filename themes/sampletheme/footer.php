@@ -35,7 +35,7 @@
 		</div>
 
 			<div class="site-info grid-x cell larger-12 small-12">
-				<div class="large-6">
+				<div class="large-8">
 					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sampletheme' ) ); ?>">
 					<?php
 					/* translators: %s: CMS name, i.e. WordPress. */
@@ -48,7 +48,7 @@
 					printf( esc_html__( 'Theme: %1$s by %2$s.', 'sampletheme' ), 'sampletheme', '<a href="https://yinghua-li.com">kelly.li</a>' );
 					?>
 				</div>
-				<div class="large-6">
+				<div class="large-4">
 					<!--  social menu at footer -->
 					<?php
 					if(has_nav_menu('menu-primary')) {
