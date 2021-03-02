@@ -153,6 +153,11 @@ wp.blocks.registerBlockStyle(
     } 
 );
 
+wp.blocks.registerBlockStyle('core/group', {
+    name: 'alignnarrow',
+    label: 'Narrow Width'
+});
+
 
 
 // wp.blocks.unregisterBlockStyle( 'core/quote', 'fancy-quote' );

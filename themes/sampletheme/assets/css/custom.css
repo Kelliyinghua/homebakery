@@ -136,8 +136,17 @@ a:visited {
 }
 
 .menu-social-menu-container > #social > .menu-item > a {
-    margin-top: 0;
+    margin-top: 0;   
+    color: white;
+    padding-top: 5px;   
 }
+
+
+.menu-social-menu-container > #social > .menu-item > a:hover {
+    color:#e79d71;
+    background: rgba(50,50,50,0.5);  
+}
+
 
 /* Product */
 .woocommerce .products ul, .woocommerce ul.products  {
