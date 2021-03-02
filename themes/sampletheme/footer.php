@@ -61,8 +61,9 @@
 					}
 					?>
 				</div>
-					
-					
+				<?php if (get_theme_mod('facebook_url')){ ?>
+				<a class="facebook-link" href="<?php echo get_theme_mod('facebook_url');?>">Facebook</a>	
+				<?php } ?>
 			</div>
 			<!-- .site-info -->
 			
