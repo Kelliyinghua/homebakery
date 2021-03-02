@@ -35,13 +35,16 @@
 		</div>
 
 			<div class="site-info grid-x cell larger-12 small-12">
-				<div class="large-8">
+				<div class="large-8 copyright">
 					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sampletheme' ) ); ?>">
 					<?php
 					/* translators: %s: CMS name, i.e. WordPress. */
 					printf( esc_html__( 'Proudly powered by %s', 'sampletheme' ), 'WordPress' );
 					?>
 				</a>
+				
+					&copy; <?php echo gmdate('Y'); ?>
+				
 				<span class="sep"> | </span>
 					<?php
 					/* translators: 1: Theme name, 2: Theme author. */
