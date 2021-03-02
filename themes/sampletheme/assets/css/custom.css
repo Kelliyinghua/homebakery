@@ -25,6 +25,10 @@ a:visited {
     color:rgb(67, 52, 54);
 }
 
+.site-title a:hover {
+    color:white;
+}
+
 #page {
     background-color: #F0F0F0;
 }
