@@ -115,7 +115,7 @@ a:visited {
     background: rgba(256,256,256,0.8);
     padding: 4.3rem 8rem;
     margin-top: 2rem;   
-    border-radius: 2rem;
+    border-radius: 1rem;
     box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
 }
 .post-thumbnail {
