@@ -51,12 +51,14 @@
 				<div class="large-6">
 					<!--  social menu at footer -->
 					<?php
+					if(has_nav_menu('menu-primary')) {
 						wp_nav_menu(
 							array(
 								'theme_location' => 'footer',
 								'menu_id'        => 'social',
 							)
 						);
+					}
 					?>
 				</div>
 					
