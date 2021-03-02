@@ -1,0 +1,139 @@
+.wsf-form .wsf-tab-disabled {
+	pointer-events: none;
+}
+
+.wsf-form .wsf-tab-disabled.tab-title > a {
+	color: #cacaca;
+	cursor: not-allowed;
+}
+
+.wsf-form [data-type='textarea'] .wp-editor-tabs {
+	box-sizing: content-box;
+}
+
+.wsf-form [data-type='textarea'] .mce-btn.mce-active button,
+.wsf-form [data-type='textarea'] .mce-btn.mce-active:hover button,
+.wsf-form [data-type='textarea'] .mce-btn.mce-active i,
+.wsf-form [data-type='textarea'] .mce-btn.mce-active:hover i {
+	color: #000;
+}
+
+.wsf-form .wp-editor-wrap.tmce-active,
+.wsf-form .CodeMirror-wrap {
+	margin: 0 0 1rem;
+}
+
+.wsf-form select[multiple] {
+	height: auto;
+}
+
+.wsf-form .select2-container {
+	margin: 0 0 1rem 0;
+}
+
+.wsf-form .select2-container--default .select2-selection--single,
+.wsf-form .select2-container--default .select2-selection--multiple {
+	border-radius: 0;
+}
+
+.wsf-form .wsf-rating {
+	margin: 0 0 1rem !important;
+}
+
+.wsf-form .dropzone {
+	background-color: #fff;
+	border: 1px dashed #ccc;
+	color: #4d4d4d;
+	margin: 0 0 1rem;
+	padding: 1rem 1rem 0;
+	cursor: pointer;
+}
+
+.wsf-form .dropzone .dz-message {
+	color: #666;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.wsf-form .dropzone.dz-started .dz-message {
+	display: none;
+}
+
+.wsf-form .dropzone .wsf-dropzonejs-previews {
+	pointer-events: none;
+}
+
+.wsf-form .dropzone .wsf-dropzonejs-preview {
+	cursor: move;
+	pointer-events: all;
+}
+
+.wsf-form .dropzone .wsf-dropzonejs-preview img {
+	margin-bottom: 1rem;
+}
+
+.wsf-form .dropzone .wsf-progress {
+	background-color: #f6f6f6;
+	height: .5rem;
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+
+.wsf-form .dropzone .wsf-progress .wsf-upload {
+	background-color: #008cba;
+	height: 100%;
+}
+
+.wsf-form .dropzone .wsf-progress.wsf-progress-success .wsf-upload {
+	background-color: #43ac6a;
+}
+
+.wsf-form .dropzone .dz-complete .wsf-progress {
+	display: none;
+}
+
+.wsf-form input[type=text]:enabled ~ .dropzone.dz-drag-hover {
+	background-color: #fafafa;
+	border-color: #999;
+	border-style: solid;
+}
+
+.wsf-disabled,
+.wsf-form input[type=text]:disabled ~ .dropzone {
+	background-color: #ddd;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.wsf-form input[type=text]:disabled ~ .dropzone .wsf-dropzonejs-preview {
+	opacity: .5;
+}
+
+.wsf-form .dropzone .error {
+	display: block;
+}
+
+.wsf-form [data-type='recaptcha'] [data-recaptcha-type] {
+	margin: 0 0 1rem 0;
+}
+
+.wsf-form .wsf-section-icon {
+	margin: 0 0 1rem !important;
+}
+
+.wsf-form .wsf-hidden {
+	display: none !important;
+}
+
+.wsf-form .collapse select ~ .select2-container {
+	flex: 1 1 auto;
+	min-width: 0;
+	position: relative;
+	width: 100% !important;
+}
+
+.wsf-form .input-group textarea.input-group-field {
+	white-space: normal;
+}
