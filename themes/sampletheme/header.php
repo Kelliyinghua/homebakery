@@ -32,7 +32,7 @@
 					<div class="large-2">
 						<?php the_custom_logo(); ?>	
 					</div>
-					<div class="large-6">
+					<div class="large-4">
 						<?php
 					if ( is_front_page() && is_home() ) :
 						?>	
