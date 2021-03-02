@@ -63,18 +63,18 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 
 	
 		add_theme_support( 'custom-header' );
-		function themename_custom_header_setup() {
+		function sampletheme_custom_header_setup() {
 			$defaults = array(
 				// Default Header Image to display
 				'default-image'         => get_template_directory_uri() . './assets/img/closeup-shot-of-chocolate-chip-cookie-isolated.png',
 				// Display the header text along with the image
-				'header-text'           => false,
+				'header-text'           => true,
 				// Header text color default
 				'default-text-color'        => 'rgb(67, 52, 54)',
 				// Header image width (in pixels)
-				'width'             => 500,
+				'width'             => 980,
 				// Header image height (in pixels)
-				'height'            => 198,
+				'height'            => 60,
 				// Header image random rotation default
 				'random-default'        => false,
 				// Enable upload of image file in admin 
@@ -87,7 +87,7 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 				'admin-preview-callback'    => 'adminpreview_cb',
 			);
 		}
-		add_action( 'after_setup_theme', 'themename_custom_header_setup' );
+		add_action( 'after_setup_theme', 'sampletheme_custom_header_setup' );
 
 		// This theme uses wp_nav_menu() in one location.
 			// register_nav_menus(
@@ -127,8 +127,8 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
+				'height'      => 100,
+				'width'       => 100,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
@@ -238,6 +238,8 @@ function sampletheme_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'sampletheme_widgets_init' );
+// Register Read More
+
 
 /**
  * Enqueue scripts and styles.

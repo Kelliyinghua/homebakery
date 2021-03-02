@@ -14,7 +14,9 @@
 	<footer id="colophon" class="site-footer grid-x grid-padding-x">
 		<div class="grid-x cell large-12 small-12">
 			<div class="callout large-3 medium-6">
-				<div id="footer-logo"></div>
+				<div id="footer-img">
+					
+				</div>
 			</div>
 			<div class="cell large-3 medium-6">
 				<h3 class="footer-title">Open Hours</h3>

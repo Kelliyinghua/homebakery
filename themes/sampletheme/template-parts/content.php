@@ -9,24 +9,28 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="large-8">
 	<header class="entry-header">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+		if ( ! is_product() ) {
+			if ( is_singular() ) :
+				the_title( '<h1 class="entry-title entry-title-block-style">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
+		}
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="entry-meta grid-x">
 				<?php
 				sampletheme_posted_on();
 				sampletheme_posted_by();
 				?>
 			</div><!-- .entry-meta -->
+		
 		<?php endif; ?>
+			
 	</header><!-- .entry-header -->
 
 	<?php sampletheme_post_thumbnail(); ?>
@@ -46,6 +50,7 @@
 				),
 				wp_kses_post( get_the_title() )
 			)
+			
 		);
 
 		wp_link_pages(
@@ -54,8 +59,10 @@
 				'after'  => '</div>',
 			)
 		);
+		
 		?>
 	</div><!-- .entry-content -->
+	
 
 	<footer class="entry-footer">
 		<?php sampletheme_entry_footer(); ?>

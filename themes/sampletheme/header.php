@@ -26,60 +26,61 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'sampletheme' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="grid-x grid-padding-x">
-			<div class="cell small-3 medium-2 large-2">
-				<div class="site-branding small-5 large-4">
-					<?php
-					the_custom_logo(); ?>
-					<!-- <?php
+		<div class="grid-x grid-padding-x header-style">
+			<div class="cell small-6 large-6">
+				<div class="site-branding grid-x">
+					<div class="large-2">
+						<?php the_custom_logo(); ?>	
+					</div>
+					<div class="large-6">
+						<?php
 					if ( is_front_page() && is_home() ) :
-						?>
+						?>	
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<?php
 					else :
 						?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<?php
 					endif;
-					$sampletheme_description = get_bloginfo( 'description', 'display' );
+					//$sampletheme_description = get_bloginfo( 'description', 'display' );
 					if ( $sampletheme_description || is_customize_preview() ) :
 						?>
-						<p class="site-description"><?php echo $sampletheme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-					<?php endif; ?> -->
-
+						<p class="site-description"><?php echo $sampletheme_description;?></p>
+					<?php endif; ?>
+					</div>
 				</div><!-- .site-branding -->
 			</div>
 			
-			<div class="cell small-6 small-offset-1 medium-8 medium-offset-2 large-offset-4 large-6">
-					<nav id="site-navigation" class="main-navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'sampletheme' ); ?></button>
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'menu-primary',
-								'menu_id'        => 'primary-menu',
-							)
-						);
-						?>
-					</nav><!-- #site-navigation -->
+			<div class="cell small-6 large-6">
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'sampletheme' ); ?></button>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-primary',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
 			</div>
 			
 		</div>
+		
 		<div class="grid-x">	
-			<div class="cell large-6 small-6">
-				<?php the_title( '<h1 class="entry-title entry-title-block-style">', '</h1>' ); ?>
-				<p class="entry-title-block-style">Homemade Sweet Treats, Fresh Brewed Coffee, Delight Lunch, Catering. </p>
-			</div>
-			
-			<div class="callout large-4 large-offset-2 small-6">
+			<div class="cell large-12">
 				<?php if ( get_header_image() ) : ?>
-					<div id="site-header">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-						</a>
-					</div>
-				<?php endif; ?>		
-			</div>
+				<div id="site-header">
+					<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="350" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+					<h1><?php the_title()?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></h1></a>
+				</div>
+				<?php endif; ?>
+				<!-- <?php the_title( '<h1 class="entry-title entry-title-block-style">', '</h1>' ); ?>
+				<p class="entry-title-block-style ">Homemade Sweet Treats, Fresh Brewed Coffee, Delight Lunch, Catering. </p>
+				<img alt="" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>"> -->
+			</div> 
+			
 		</div>
 
 		
