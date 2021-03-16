@@ -4,6 +4,7 @@ body {
     margin-bottom: 0 !important;
 }
 
+/* Seting primary font family  */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: 'Cormorant', serif; 
     color: rgb(67, 52, 54);  
@@ -15,10 +16,6 @@ a:hover {
 }
 a:visited {
     color:transparent;
-}
-
-.site-title {
-    margin-top: 1rem;
 }
 
 .site-title a {
