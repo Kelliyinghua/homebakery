@@ -59,7 +59,7 @@
 			
 			<!-- navigation starts here -->
 			<div class="grid-x grid-padding-x site-nav-style">
-				<nav id="site-navigation" class="main-navigation large-10 large-offset-2 small-12">
+				<nav id="site-navigation" class="main-navigation large-6 large-offset-3 small-12">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'sampletheme' ); ?></button>
 					<?php
 					if(has_nav_menu('footer')){

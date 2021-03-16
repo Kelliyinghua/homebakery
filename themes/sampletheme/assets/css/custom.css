@@ -66,6 +66,9 @@ a:visited {
     border-top: rgb(67, 52, 54) 1px dashed;
 }
 
+.entry-content  {
+    margin-top: 0;
+}
 
 /* Footer background and styling  */
 .site-footer {
