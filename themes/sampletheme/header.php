@@ -97,4 +97,4 @@
 		
 	</header><!-- #masthead -->
 
-	<div class="grid-container full">
+	<div class="grid-container">

@@ -137,7 +137,7 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 		/**
 		 * Addd support for block style
 		 */
-		// add_theme_support( 'wp-block-styles' );
+		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'align-wide' );
 
 		/**

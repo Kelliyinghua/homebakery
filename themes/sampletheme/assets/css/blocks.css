@@ -6,7 +6,6 @@
     color:rgb(67, 52, 54);
 }
 .is-style-fancy-heading {
-    /* font-family: 'Cormorant', serif;     */
     font-family: 'Lobster Two', cursive;
     color:rgb(67, 52, 54);
 }
@@ -64,10 +63,10 @@
 
 .is-style-fancy-image {
     /* background-color: rgba(240, 201, 200, 0.5); */
-    box-shadow: 1px 1px 3px #888;
-    border-radius: 40px;
-    max-width: 50%;
-    height: auto; 
+    border-radius: 50%;
+    width: 200px;
+    height: 200px; 
+    max-width: 100%;
 }
 
 .wp-block-gallery.is-style-fancy-gallery .blocks-gallery-item {
@@ -135,12 +134,19 @@
 .has-brown-color {
     color: rgb(67, 52, 54);
 }
+
+.wp-block {
+    max-width: 80rem;
+}
+
+.wp-block[data-align|=wide] {
+    max-width: 90rem;
+}
+
+
 .is-style-alignnarrow {
     max-width: 70rem;
     margin-right:auto;
     margin-left: auto;
     
-}
-.alignwide {
-    max-width: 50%;
 }
