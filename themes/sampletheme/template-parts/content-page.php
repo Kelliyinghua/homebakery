@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php sampletheme_post_thumbnail(); ?>
 
-	<div class="grid-x">
+	<div class="grid-x grid-margin-x grid-margin-y">
 		<div class="entry-content large-12 small-12">
 			<?php
 			the_content();

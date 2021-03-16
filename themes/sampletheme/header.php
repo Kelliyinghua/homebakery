@@ -29,13 +29,13 @@
 		<div class="header-style">
 			<!-- Site header starts here -->
 			<div class="site-branding grid-x grid-padding-x">
-				<div class="large-12 small-12">
+				<div class="large-4 large-offset-4 small-12">
 					<?php the_custom_logo(); ?>	
 				</div>
 			</div>
 
 			<div class="grid-x grid-paading-x">
-				<div class="large-12 small-12">
+				<div class="large-4 large-offset-4 small-12">
 					<?php
 					if ( is_front_page() && is_home() ) :
 						?>	
@@ -58,8 +58,8 @@
 			</div><!-- .site-branding -->
 			
 			<!-- navigation starts here -->
-			<div class="grid-x grid-padding-x">
-				<nav id="site-navigation" class="main-navigation large-6 large-offset-3 small-12">
+			<div class="grid-x grid-padding-x site-nav-style">
+				<nav id="site-navigation" class="main-navigation large-10 large-offset-2 small-12">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'sampletheme' ); ?></button>
 					<?php
 					if(has_nav_menu('footer')){
@@ -97,4 +97,4 @@
 		
 	</header><!-- #masthead -->
 
-	<div class="grid-container">
+	<div class="grid-container full">

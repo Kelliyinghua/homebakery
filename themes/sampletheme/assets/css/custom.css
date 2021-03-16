@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Lobster+Two&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
 body {
     margin-bottom: 0 !important;
 }
@@ -10,7 +10,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     color: rgb(67, 52, 54);  
 }
 
-
 a:hover {
     color:#e79d71;
 }
@@ -18,61 +17,57 @@ a:visited {
     color:transparent;
 }
 
+/* Headder background colour */
+.header-style {
+    /* background: rgb(148, 125, 128); */
+    text-align: center;
+    background: #f8f8f8;
+    box-shadow: 0px 2px 5px #ddd;
+}
+
+/* Site logo */
+.custom-logo {
+    width: 100px;
+}
+
+/* Header site title style */
 .site-title a {
     color:rgb(67, 52, 54);
+
 }
 
 .site-title a:hover {
-    color:white;
+    color:#e79d71;
 }
 
-#page {
-    background-color: #F0F0F0;
+.site-description {
+    font-family: 'Redressed', cursive;
+    font-size: 1rem;
 }
 
-.callout {
-    background-color: transparent;
-    border:none;
-}
 
-.header-title, h1 {
-    color: rgb(67, 52, 54);
-    margin: 1rem 0;
+/* Navigation styling  */
+.menu a, .menu .button {
+    font-size: 1.3rem;
     font-family: 'Cormorant', serif;
+    padding: 1rem 2rem;
+    color:rgb(67, 52, 54);
 }
 
-.header-title p {
-    font-family: 'Lobster Two', cursive;
-    margin: -1rem 0 0 1rem;
+.menu a:hover, .menu .button:hover {
+    /* background: rgb(67, 52, 54); */
+    background:#e79c7150;
+    color: rgb(32, 25, 26);
+    font-weight: 700;
+
 }
 
-.header-img > img {
-    max-width: 400px;
-    padding: 2rem;
+.site-nav-style {
+    border-top: rgb(67, 52, 54) 1px dashed;
 }
 
-.header-style {
-    background: rgb(148, 125, 128);
-}
 
-.custom-logo {
-    padding: 1rem;
-    height: auto;
-    width: 150px;
-}
-
-.entry-title-block-style {
-    margin-left: 2rem;
-}
-/* 
-.entry-title {
-    text-align: center;
-} */
-
-.site-header {
-    text-align: center;
-}
-
+/* Footer background and styling  */
 .site-footer {
     background: rgb(67, 52, 54);
     color: white;
@@ -86,33 +81,24 @@ a:visited {
 }
 
 
-.menu a, .menu .button {
-    font-size: 1.3rem;
-    font-family: 'Cormorant', serif;
-    padding: 1rem 2rem;
-    color:rgb(67, 52, 54);
-    margin-top: 1.2rem;
-}
-
-.menu a:hover, .menu .button:hover {
-    background: rgb(67, 52, 54);
-    color: white;
-    font-weight: 700;
-
-}
-
-.sub-menu {
-    background: rgb(148, 125, 128);
-}
-
 /* About Page */
-
 .jr-insta-thumb {
     margin: 2rem 4rem;
 }
 
 #wpforms-form-174 {
     margin-left: 3rem;
+}
+
+
+/* Blog */
+#page {
+    background-color: #fff;
+}
+
+.callout {
+    background-color: transparent;
+    border:none;
 }
 
 /* post single */
