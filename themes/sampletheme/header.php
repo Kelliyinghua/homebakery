@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'sampletheme' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'smapletheme' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="header-style">
@@ -47,10 +47,10 @@
 						<?php
 					endif;
 					
-					$sampletheme_description = get_bloginfo( 'description', 'display' );
-					if ( $sampletheme_description || is_customize_preview() ) :
+					$smapletheme_description = get_bloginfo( 'description', 'display' );
+					if ( $smapletheme_description || is_customize_preview() ) :
 						?>
-						<p class="site-description"><?php echo $sampletheme_description;?></p>
+						<p class="site-description"><?php echo $smapletheme_description;?></p>
 					<?php 
 				endif; ?>
 				
@@ -59,8 +59,8 @@
 			
 			<!-- navigation starts here -->
 			<div class="grid-x grid-padding-x site-nav-style">
-				<nav id="site-navigation" class="main-navigation large-6 large-offset-3 small-12">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'sampletheme' ); ?></button>
+				<nav id="site-navigation" class="main-navigation large-12 small-12">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'smapletheme' ); ?></button>
 					<?php
 					if(has_nav_menu('footer')){
 					wp_nav_menu(

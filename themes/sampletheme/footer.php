@@ -36,10 +36,10 @@
 
 			<div class="site-info grid-x cell larger-12 small-12">
 				<div class="large-8 copyright">
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sampletheme' ) ); ?>">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'smapletheme' ) ); ?>">
 					<?php
 					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'sampletheme' ), 'WordPress' );
+					printf( esc_html__( 'Proudly powered by %s', 'smapletheme' ), 'WordPress' );
 					?>
 				</a>
 				
@@ -48,7 +48,7 @@
 				<span class="sep"> | </span>
 					<?php
 					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'sampletheme' ), 'sampletheme', '<a href="https://yinghua-li.com">kelly.li</a>' );
+					printf( esc_html__( 'Theme: %1$s by %2$s.', 'smapletheme' ), 'smapletheme', '<a href="https://yinghua-li.com">kelly.li</a>' );
 					?>
 				</div>
 				<div class="large-4">

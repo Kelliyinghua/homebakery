@@ -16,12 +16,12 @@ add_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 2 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
 
-// function sampletheme_woocommerce_single_product_summary_subtitle() {
+// function smapletheme_woocommerce_single_product_summary_subtitle() {
 //     echo '<b style="color:red;">Look at the amazing price!</b>';
 // }
-// add_action( 'woocommerce_before_add_to_cart_form', 'sampletheme_woocommerce_single_product_summary_subtitle', 2 );
+// add_action( 'woocommerce_before_add_to_cart_form', 'smapletheme_woocommerce_single_product_summary_subtitle', 2 );
 
-// add_action( 'woocommerce_single_product_summary', 'sampletheme_woocommerce_single_product_summary_subtitle', 3 );add_shortcode( 'product_reviews', 'bbloomer_product_reviews_shortcode' );
+// add_action( 'woocommerce_single_product_summary', 'smapletheme_woocommerce_single_product_summary_subtitle', 3 );add_shortcode( 'product_reviews', 'bbloomer_product_reviews_shortcode' );
  
 function bbloomer_product_reviews_shortcode( $atts ) {
     

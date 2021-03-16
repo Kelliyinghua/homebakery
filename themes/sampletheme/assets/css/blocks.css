@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Lobster+Two&display=swap');
 
 
-.block-editor-block-list__layout .wp-block > h1,h2,h3,h4 {
+.wp-block > h1,h2,h3,h4 {
     font-family: 'Cormorant', serif;    
     color:rgb(67, 52, 54);
 }
@@ -12,6 +12,10 @@
 
 .is-style-fancy-paragraph {
     font-family: 'Lobster Two', cursive;
+}
+
+.is-style-elegant-paragraph {
+    font-family: 'Cormorant', serif; 
 }
 
 .is-style-fancy-list {

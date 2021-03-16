@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php sampletheme_post_thumbnail(); ?>
+	<?php smapletheme_post_thumbnail(); ?>
 
 	<div class="grid-x">
 		<div class="entry-content large-12 small-12">
@@ -19,7 +19,7 @@
 
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sampletheme' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'smapletheme' ),
 					'after'  => '</div>',
 				)
 			);

@@ -16,6 +16,14 @@ wp.blocks.registerBlockStyle(
     } 
 );
 
+wp.blocks.registerBlockStyle( 
+    'core/paragraph', 
+    {
+        name: 'elegant-paragraph',
+        label: 'Elegant Paragraph'
+    } 
+);
+
 
 wp.blocks.registerBlockStyle( 
     'core/list', 
