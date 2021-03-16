@@ -9,6 +9,8 @@
 
 $(document).foundation();
 
+
+
 ( function( $ ) {
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
@@ -22,3 +24,6 @@ $(document).foundation();
 		} );
 	} );
 }( jQuery ) );
+
+
+
