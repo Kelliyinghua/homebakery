@@ -9,9 +9,9 @@
 
 get_header();
 ?>
-<div class="">
-	<div class="grid-x grid-margin-x grid-margin-y">
-		<div class="small-12 large-8">
+
+	<div class="grid-x">
+		<div class="small-12 medium-9 large-9">
 			<main id="primary" class="site-main">
 
 				<?php
@@ -37,11 +37,11 @@ get_header();
 			</main><!-- #main -->
 		</div> <!-- large-8 ends -->
 		
-		<div class="cell small-12 medium-4 custom-sidebar">
+		<div class="cell small-12 medium-3 large-3 custom-sidebar">
 			<?php get_sidebar();?>
 		</div>
 	</div> <!-- grid-x ends -->
-</div><!-- grid-container ends -->
+
 
 	</div>
 

@@ -10,7 +10,7 @@ body {
     --primary-color: rgb(67, 52, 54);
     --secondary-color:rgb(231, 157, 113);
     --secondary2-color: rgb(148, 125, 128);
-    font-family: 'Cormorant', serif; 
+    --main-font: 'Cormorant', serif; 
 }
 
 
@@ -225,10 +225,37 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 /* Custom Side Bar Styling  */
 .widget-area {
-    padding: 2rem 1rem;
-    background-color: #f8f8f8;
+    padding: 2rem 1.5rem;
+    width: 100%;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-left: 1rem;
+    background-color: #f8f8f8;
+    font-family: var(--main-font);
+}
+
+.widget:not(:last-child) {
+    border-bottom: 1px dashed rgb(67, 52, 54);
+    padding-bottom: 1.5rem;
+}
+
+.widget-title {
+    font-size: 2.1rem;
+}
+
+.widget > ul {
+    list-style-type: circle;
+    /* margin-left: 0; */
+}
+
+.widget > ul > li {
+    line-height: 3;
+}
+
+.widget > ul > li > a {
+    color:rgb(67, 52, 54);
+}
+.widget > ul > li > a:visited {
+    color:rgb(231, 157, 113);
 }
 
 /**  Below is the WooCommerce Features **/
