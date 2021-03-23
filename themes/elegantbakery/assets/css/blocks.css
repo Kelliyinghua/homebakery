@@ -25,7 +25,7 @@
 
 .wp-block-quote,
 .wp-block-quote.is-style-default {
-    color: rgb(67, 52, 54)n;
+    color: rgb(67, 52, 54);
 }
 
 .wp-block-quote.is-style-fancy-quote {
@@ -47,8 +47,12 @@
 
 .is-style-fancy-pullquote {
     font-family: 'Lobster Two', cursive;
-    border: 3px dashed #e79d71;
-    border-radius: 30px;
+    color: rgb(67, 52, 54);
+    
+}
+
+.wp-block-pullquote .wp-block-pullquote__citation {
+    font-family: 'Cormorant', serif; 
 }
 
 .wp-block-table.is-style-fancy-table tbody tr:nth-child(odd)  {

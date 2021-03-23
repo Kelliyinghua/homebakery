@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="large-8">
 	<header class="entry-header">
 		<?php
-			if (is_product() ) {
+			if (!is_product() ) {
 				if ( is_singular() ) :
 					the_title( '<h1 class="entry-title entry-title-block-style">', '</h1>' );
 				else :

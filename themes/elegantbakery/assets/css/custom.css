@@ -5,24 +5,25 @@ body {
     margin-bottom: 0 !important;
 }
 
-/* Seting the general style for all pages   */
+/* Seting the general style for all pages *******/
 :root {
-    --primary-color: rgb(67, 52, 54);
-    --secondary-color:rgb(231, 157, 113);
-    --secondary2-color: rgb(148, 125, 128);
+    --primary-color: #433436;
+    --secondary-color:#e79d71;
+    --thertiary-color:#947d80;
+    --quaternary-color: #fad1d0;
     --main-font: 'Cormorant', serif; 
+    --secondary-font: Arial, Helvetica, sans-serif;
 }
 
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: 'Cormorant', serif; 
-    color: rgb(67, 52, 54);  
+    color: var(--primary-color);  
 }
 
 #page {
     background-color: #fff;
 }
-
 
 /* Alignment setting */
 .grid-container {
@@ -57,7 +58,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     width: 100px;
 }
 
-/* Header site title style */
+/* Header site title style *************************/
 .site-title a {
     color:var(--primary-color);
 }
@@ -69,21 +70,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .site-description {
     font-family: 'Redressed', cursive;
     font-size: 1rem;
-    color:rgb(148, 125, 128);
+    color:var(--thertiary-color);
 }
 
 
-/* Navigation styling  */
+/* Navigation styling  *************************/
 .menu-primary-menu-container {
     display: flex;
     justify-content: center;
 }
- 
+
 #primary-menu {
     flex: 1;
     justify-content: center;
 }
-
 
 .menu-item {
     font-size: 1.2rem;
@@ -92,28 +92,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .menu-item a {
-    color:rgb(67, 52, 54);
+    color:var(--primary-color);
 }
 
 .menu a:hover, .menu .button:hover {
     background:#e79c7144;
-    color:rgb(148, 125, 128);
+    color:var(--thertiary-color);
     font-weight: 700;
 
 }
 
 .site-nav-style {
-    border-top: rgb(67, 52, 54) 1px dashed;
+    border-top: var(--primary-color) 1px dashed;
 }
 
-/* Slider Style */
+/* Slider Style *************************/
 #gutenslider-bqpme7vrh {
     height: 300px;
 }
 
-/* Footer background and styling  */
+/* Footer background and styling  *************************************/
 .site-footer {
-    background: rgb(67, 52, 54);
+    background: var(--primary-color);
     color: white;
     padding-top: 2.3rem;
 }
@@ -127,7 +127,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     color: #f8f8f8;
     padding: 1.2rem 1rem;
 }
-
 
 /* Footer Logo styling */
 .footerLogoContainer {
@@ -147,7 +146,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 /* Footer social menu styling */
-
 #social {
     display: flex;
     justify-content: flex-end;
@@ -172,7 +170,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .menu-social-menu-container > #social > .menu-item > a > i:hover {
-    color:#e79d71;
+    color:var(--secondary-color);
 }
 
 
@@ -185,32 +183,34 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     width: 170px;
 }
 
-/* About Page */
+/* About Page *******************************************/
 .banner {
     height: 350px;
     background-color: #ddd;
-    background-image: url(../img//banner-bg.jpg);
+    background-image: url(../img/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
+.blockquote {
+    border-left: 0px;
+}
+
+.blockquote, .blockquote p {
+    color: var(--thertiary-color);
+}
+/* social media */
 .jr-insta-thumb {
     margin: 2rem 4rem;
 }
 
-#wpforms-form-174 {
-    margin-left: 3rem;
-}
-
-
-/* Blog */
+/* Blog page *******************************************/
 .callout {
     background-color: transparent;
     border:none;
 }
 
-/* post single */
+/* Post single *************************************/
 .post {
     /* background: rgba(256,256,256,0.8);
     padding: 4.3rem 8rem;
@@ -223,7 +223,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     width: 25%;
 }
 
-/* Custom Side Bar Styling  */
+/* Custom Side Bar Styling  *************************/
 .widget-area {
     padding: 2rem 1.5rem;
     width: 100%;
@@ -252,22 +252,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .widget > ul > li > a {
-    color:rgb(67, 52, 54);
+    color:var(--primary-color);
 }
 .widget > ul > li > a:visited {
-    color:rgb(231, 157, 113);
+    color:var(--secondary-color);
 }
 
 /**  Below is the WooCommerce Features **/
-/* Product Archive Page*/
+/* Product Archive Page *************************************/
 .woocommerce .products ul, .woocommerce ul.products  {
     background: rgba(256,256,256,0.8);
-    box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
+    box-shadow: 1px 1px 3px rgba(148, 125, 128,0.6);
     padding: 2rem 4rem;
 }
-/* price color & size */
+/* Price color & size */
 .woocommerce ul.products li.product .price {
-    color:rgb(148, 125, 128);
+    color:rgb(67, 52, 54);
     font-size: 1rem;
     font-weight: 600;
 }
@@ -293,10 +293,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 10px;
     color:rgb(148,125,128);
     background: #f1f1f1;
-
 }
 
-/* After added to cart message box */
+/* After added to cart message box style */
 .woocommerce-message {
     border-top-color:rgb(148,125,128);
 }
@@ -318,11 +317,47 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 
-/* Shop single */
+/* Shop single ************************************************/
+.woocommerce div.product .product_title {
+    font-size: 2.3rem;
+}
+
+.woocommerce-product-details__short-description > p {
+    font-family: var(--secondary-font);
+    font-size: 0.9rem;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price,
+.woocommerce div.product .stock {
+    color: #de5303;
+}
+
+.woocommerce div.product form.cart .button {
+    background-color: var(--secondary-color);
+    color:var(--primary-color);
+}
+.woocommerce div.product form.cart .button:hover {
+    color: var(--secondary-color);
+    background-color:var(--primary-color);
+}
+
+.posted_in > a {
+    color:var(--thertiary-color);
+}
+
+.posted_in > a:visited {
+    color:var(--secondary-color);
+}
+
+/* Description panels */
 .woocommerce div.product .woocommerce-tabs .panel {
     background: rgba(256,256,256,0.8);
-    box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
-    padding: 4rem;
+    box-shadow: 1px 1px 3px rgba(148, 125, 128,0.6);
+    padding: 1.2rem 2rem;
+}
+
+#tab-description h2 {
+    font-size: 2rem;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
@@ -330,6 +365,30 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .woocommerce-product-gallery__image {
     padding: 0 0 2rem 0;
+}
+
+
+/* Related products */
+.related, .comments-area {
+    box-shadow: 1px 1px 3px rgba(148, 125, 128,0.6);
+    padding: 1rem 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.related > h2  {
+    font-size: 2.2rem;
+}
+.related > .woocommerce .products ul, .woocommerce ul.products  {
+    box-shadow: none;
+    padding: 0;
+}
+
+.nav-next {
+    margin-top: 1rem;
+}
+
+.nav-next > a {
+    color:var(--secondary-color); 
 }
 
 /* Cart */
