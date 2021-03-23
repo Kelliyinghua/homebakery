@@ -383,12 +383,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     padding: 0;
 }
 
-.nav-next {
-    margin-top: 1rem;
+.nav-next, .nav-previous {
+    /* margin-top: 0.2rem; */
 }
 
-.nav-next > a {
-    color:var(--secondary-color); 
+.nav-next > a, .nav-previous > a {
+    color: var(--primary-color); 
+    font-weight: 600;
+
+}
+.nav-next > a:hover, .nav-previous > a:hover {
+    color: var(--secondary-color);
 }
 
 /* Cart */
