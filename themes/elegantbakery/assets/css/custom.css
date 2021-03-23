@@ -457,6 +457,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .woocommerce-MyAccount-content > p:first-child {
     font-size: 2rem;
 }
+/* Downloads tab message box */
+.woocommerce-info {
+    border-top-color: var(--thertiary-color);
+}
+
+.woocommerce-info::before {
+    color: var(--thertiary-color);
+}
 
 /* checkout */
 
