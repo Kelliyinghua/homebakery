@@ -37,7 +37,7 @@ get_header();
 			</main><!-- #main -->
 		</div>
 	
-		<div class="cell small-12 medium-4">
+		<div class="cell small-12 medium-4 custom-sidebar">
 			<?php get_sidebar();?>
 		</div>
 	

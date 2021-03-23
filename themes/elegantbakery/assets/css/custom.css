@@ -223,9 +223,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .post-thumbnail {
     width: 45%;
 }
-/* footer */
 
+/* Custom Side Bar Styling  */
+#secondary {
+    padding: 2rem 1rem;
+    background-color: #f8f8f8;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
+}
+
+/**  Below is the WooCommerce Features **/
 /* Product */
 .woocommerce .products ul, .woocommerce ul.products  {
     background: rgba(256,256,256,0.8);
