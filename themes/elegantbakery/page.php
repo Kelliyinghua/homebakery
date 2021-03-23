@@ -34,5 +34,12 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-// get_sidebar();
+if ( is_page('blog') ):?>
+    <div class="cell small-12 medium-4 custom-sidebar">
+		<?php get_sidebar();?>
+	</div>
+<?php else:
+    
+endif;
+//get_sidebar();
 get_footer();

@@ -12,22 +12,22 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="large-8">
 	<header class="entry-header">
 		<?php
-		if ( ! is_product() ) {
-			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title entry-title-block-style">', '</h1>' );
-			else :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
-		}
+			if (is_product() ) {
+				if ( is_singular() ) :
+					the_title( '<h1 class="entry-title entry-title-block-style">', '</h1>' );
+				else :
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				endif;
+			}
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta grid-x">
-				<?php
-				elegantbakerytheme_posted_on();
-				elegantbakerytheme_posted_by();
+			if ( 'post' === get_post_type() ) :
 				?>
-			</div><!-- .entry-meta -->
+				<div class="entry-meta grid-x">
+					<?php
+					elegantbakerytheme_posted_on();
+					elegantbakerytheme_posted_by();
+					?>
+				</div><!-- .entry-meta -->
 		
 		<?php endif; ?>
 			

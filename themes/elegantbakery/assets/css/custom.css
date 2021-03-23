@@ -205,7 +205,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 
 /* Blog */
-
 .callout {
     background-color: transparent;
     border:none;
@@ -213,33 +212,84 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 /* post single */
 .post {
-    background: rgba(256,256,256,0.8);
+    /* background: rgba(256,256,256,0.8);
     padding: 4.3rem 8rem;
     margin-top: 2rem;   
     margin-bottom: 10rem;
     border-radius: 0.7rem;
-    box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
+    box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6); */
 }
 .post-thumbnail {
-    width: 45%;
+    width: 25%;
 }
 
 /* Custom Side Bar Styling  */
-#secondary {
+.widget-area {
     padding: 2rem 1rem;
     background-color: #f8f8f8;
     margin-top: 2rem;
     margin-bottom: 2rem;
-
 }
 
 /**  Below is the WooCommerce Features **/
-/* Product */
+/* Product Archive Page*/
 .woocommerce .products ul, .woocommerce ul.products  {
     background: rgba(256,256,256,0.8);
     box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
     padding: 2rem 4rem;
 }
+/* price color & size */
+.woocommerce ul.products li.product .price {
+    color:rgb(148, 125, 128);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Add to cart button color */
+.woocommerce ul.products li.product .button {
+    background: rgb(231, 156, 113);
+    color:rgb(67, 52, 54);
+}
+
+.woocommerce ul.products li.product .button:hover {
+    background-color: rgba(67, 52, 54, 0.96);
+    color: rgb(231, 156, 113);
+}
+
+/* View Cart call to action (after click add to cart) */
+.woocommerce a.added_to_cart {
+    /* border: 1px solid #333; */
+    width: 142px;
+    padding: 0.2em;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    color:rgb(148,125,128);
+    background: #f1f1f1;
+
+}
+
+/* After added to cart message box */
+.woocommerce-message {
+    border-top-color:rgb(148,125,128);
+}
+
+.woocommerce-message::before {
+    color:rgb(148,125,128);
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, 
+.woocommerce button.button, .woocommerce input.button {
+    background-color:rgb(231, 157, 113);
+    color:rgb(67, 52, 54);
+}
+
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
+.woocommerce button.button:hover, .woocommerce input.button:hover {
+    background-color:rgba(231, 156, 113, 0.5);
+    color:rgb(67, 52, 54);
+}
+
 
 /* Shop single */
 .woocommerce div.product .woocommerce-tabs .panel {
