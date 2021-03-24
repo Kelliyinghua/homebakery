@@ -138,7 +138,14 @@ if ( ! function_exists( 'elegantbakerytheme_setup' ) ) :
 		 * Addd support for block style
 		 */
 		add_theme_support( 'wp-block-styles' );
-		add_theme_support( 'align-wide' );
+
+		/**
+		 * Addd support for block style
+		 */
+		if (! is_page_template('templates/sidebar-right.php')) {
+			add_theme_support( 'align-wide' );
+		}
+		
 
 		/**
 		 * Add Colour Palette
@@ -147,7 +154,7 @@ if ( ! function_exists( 'elegantbakerytheme_setup' ) ) :
 			array(
 				'name' => esc_attr__( 'Pink', 'elegantbakerytheme' ),
 				'slug' => 'pink',
-				'color' => '#FCF0F0',
+				'color' => '#fad1d0',
 			),
 			array(
 				'name' => esc_attr__( 'Brown', 'elegantbakerytheme' ),
@@ -156,8 +163,8 @@ if ( ! function_exists( 'elegantbakerytheme_setup' ) ) :
 			),
 			array(
 				'name' => esc_attr__( 'Pinkyish Brown', 'elegantbakerytheme' ),
-				'slug' => 'pinkish brownn',
-				'color' => '#564854',
+				'slug' => 'pinkish brown',
+				'color' => '#947d80',
 			),
 			array(
 				'name' => esc_attr__( 'Rose Gold', 'elegantbakerytheme' ),
@@ -281,6 +288,12 @@ require get_template_directory() . '/inc/customizer.php';
  * Woocommerce hooks.
  */
 require get_template_directory() . '/inc/woocommerce.php';
+/**
+ * Custom post types.
+ */
+require get_template_directory() . '/inc/post-types.php';
+
+
 
 /**
  * Enqueinng block editor assets

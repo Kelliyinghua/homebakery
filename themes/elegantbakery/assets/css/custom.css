@@ -9,10 +9,12 @@ body {
 :root {
     --primary-color: #433436;
     --secondary-color:#e79d71;
-    --thertiary-color:#947d80;
+    --tertiary-color:#947d80;
     --quaternary-color: #fad1d0;
     --main-font: 'Cormorant', serif; 
-    --secondary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Redressed', cursive;
+    --tertiary-font: 'Lobster',cursive;
+    --quaternary-font:  Arial, Helvetica, sans-serif;
 }
 
 
@@ -70,7 +72,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .site-description {
     font-family: 'Redressed', cursive;
     font-size: 1rem;
-    color:var(--thertiary-color);
+    color:var(--tertiary-color);
 }
 
 
@@ -97,7 +99,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .menu a:hover, .menu .button:hover {
     background:#e79c7144;
-    color:var(--thertiary-color);
+    color:var(--tertiary-color);
     font-weight: 700;
 
 }
@@ -197,7 +199,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .blockquote, .blockquote p {
-    color: var(--thertiary-color);
+    color: var(--tertiary-color);
 }
 /* social media */
 .jr-insta-thumb {
@@ -217,7 +219,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 2rem;   
     margin-bottom: 10rem;
     border-radius: 0.7rem;
-    box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6); */
+    box-shadow: 1px 1px 5px rgb(148, 125, 128); */
 }
 .post-thumbnail {
     width: 25%;
@@ -323,7 +325,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .woocommerce-product-details__short-description > p {
-    font-family: var(--secondary-font);
+    font-family: var(--quaternary-font);
     font-size: 0.9rem;
 }
 
@@ -342,7 +344,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .posted_in > a {
-    color:var(--thertiary-color);
+    color:var(--tertiary-color);
 }
 
 .posted_in > a:visited {
@@ -429,11 +431,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     color:var(--secondary-color);
     transition: all ease-in-out .25s;
 }
-/* My account page */
+/* My account page ************************************/
+
+/* My account page navigation style */
 .woocommerce-MyAccount-navigation {
     background: rgba(255,255,255,0.6);
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
+    font-family: var(--main-font);
 }
 .woocommerce-MyAccount-navigation ul{
     list-style: none;
@@ -444,6 +449,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 2rem;
     border-bottom: 1px rgba(148, 125, 128,0.6) solid;
     color:rgb(67, 52, 54);
+    font-size: 1.2rem;
 }
 
 .woocommerce-MyAccount-navigation ul li a{
@@ -457,13 +463,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .woocommerce-MyAccount-content > p:first-child {
     font-size: 2rem;
 }
+
+/* My account page content style */
+.woocommerce-MyAccount-content > p > a {
+    color: var(--secondary-color);
+}
+
 /* Downloads tab message box */
 .woocommerce-info {
-    border-top-color: var(--thertiary-color);
+    border-top-color: var(--tertiary-color);
 }
 
 .woocommerce-info::before {
-    color: var(--thertiary-color);
+    color: var(--tertiary-color);
 }
 
 /* checkout */
@@ -518,3 +530,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-size: 1.3rem;
 }
     
+/* Custom Post type --- Event ***************************/
+
+.event {
+    padding: 0.5rem 0rem;
+}

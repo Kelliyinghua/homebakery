@@ -75,7 +75,9 @@ $w_id  = explode('-', $this->id)[1];
                                                                                          value="username" <?php checked('username', $instance['search_for']); ?> /> <?php _e('Username:', 'instagram-slider-widget'); ?></label> <input
                             id="<?php echo $this->get_field_id('username'); ?>" class="isw-float-right inline-field-text"
                             name="<?php echo $this->get_field_name('username'); ?>"
-                            value="<?php echo $instance['username']; ?>"/></span>
+                            value="<?php echo $instance['username']; ?>"
+                            style="height: 30px"
+                    /></span>
                 <span class="jr-search-for-container"><label class="jr-seach-for"><input type="radio" class=""
                                                                                          id="<?php echo $this->get_field_id('search_for'); ?>"
                                                                                          name="<?php echo $this->get_field_name('search_for'); ?>"
@@ -83,7 +85,9 @@ $w_id  = explode('-', $this->id)[1];
                             id="<?php echo $this->get_field_id('hashtag'); ?>" class="isw-float-right inline-field-text"
                             name="<?php echo $this->get_field_name('hashtag'); ?>"
                             value="<?php echo $instance['hashtag']; ?>"
-                            placeholder="<?php _e('without # sign', 'instagram-slider-widget') ?>"/></span>
+                            placeholder="<?php _e('without # sign', 'instagram-slider-widget') ?>"
+                            style="height: 30px"
+                    /></span>
                 <span class="jr-description hashtag-problem-info <?php if ( 'hashtag' != $instance['search_for'] ) {
 		            echo 'hidden';
 	            } ?>"><?php _e( 'If you have problems displaying by hashtag, please connect your business account and select display by hashtag again', 'instagram-slider-widget' ); ?></span>
@@ -181,8 +185,41 @@ $w_id  = explode('-', $this->id)[1];
                         <span class="slider round"></span>
                     </label>
                 </p>
+                <?php if($this->WIS->is_premium()) : ?>
+                    <p class="enable_stories">
+                        <strong><?php _e('Enable Stories:', 'instagram-slider-widget'); ?></strong>
+                        <label class="switch" for="<?php echo $this->get_field_id('enable_stories'); ?>">
+                            <input class="widefat" id="<?php echo $this->get_field_id('enable_stories'); ?>"
+                                   name="<?php echo $this->get_field_name('enable_stories'); ?>" type="checkbox"
+                                   value="1" <?php checked('1', $instance['enable_stories']); ?>/>
+                            <span class="slider round" <?= !$this->WIS->is_premium() ? 'style="background-color:grey;"' : '' ?> ></span>
+                        </label>
+                        <span class="jr-description">
+                            <?php
+                                _e('Works only with business account.', 'instagram-slider-widget');
+                            ?>
+                        </span>
+                    </p>
+                <?php else: ?>
+                    <p class="enable_stories" style="color:grey;">
+                        <strong><?php _e('Enable Stories:', 'instagram-slider-widget'); ?></strong>
+                        <label class="switch" for="<?php echo $this->get_field_id('enable_stories'); ?>">
+                            <input class="widefat" id="<?php echo $this->get_field_id('enable_stories'); ?>"
+                                   name="<?php echo $this->get_field_name('enable_stories'); ?>" type="checkbox"
+                                   value="1" <?php checked('1', $instance['enable_stories']); ?>
+                                    disabled
+                            />
+                            <span class="slider round" style="background-color:grey;"></span>
+                        </label>
+                        <span class="jr-description">
+                        <?php
+                            _e('Available in PRO version.', 'instagram-slider-widget');
+                            echo " " . sprintf(__("More in <a href='%s'>PRO version</a>", 'instagram-slider-widget'), $this->WIS->get_support()->get_pricing_url(true, "wis_widget_settings"));
+                        ?>
+                    </span>
+                    </p>
+                <?php endif;?>
                 <p>
-
                     <label for="<?php echo $this->get_field_id('template'); ?>"><strong><?php _e('Template', 'instagram-slider-widget'); ?></strong>
                         <select class="widefat" name="<?php echo $this->get_field_name('template'); ?>"
                                 id="<?php echo $this->get_field_id('template'); ?>">
@@ -291,7 +328,7 @@ $w_id  = explode('-', $this->id)[1];
                                name="<?php echo $this->get_field_name('highlight_offset'); ?>"
                                value="<?php echo $instance['highlight_offset']; ?>"/>
                     </label>
-                    <br>
+                    <p></p>
                     <label for="<?php echo $this->get_field_id('highlight_pattern'); ?>"><strong><?php _e('Pattern', 'instagram-slider-widget'); ?></strong>
                         <input type="number" min="0" class="small-text"
                                id="<?php echo $this->get_field_id('highlight_pattern'); ?>"
@@ -325,11 +362,9 @@ $w_id  = explode('-', $this->id)[1];
                                value="<?php echo $instance['shopifeed_columns']; ?>"/>
                     </label>
                 </p>
-                <p class="slider_normal_settings jr-slider-options <?php if ('slider' != $instance['template'] && 'slider-overlay' != $instance['template']) {
-                    echo 'hidden';
-                } ?>">
-
-                    <?php _e('Slider Navigation Controls:', 'instagram-slider-widget'); ?><br>
+                <p class="slider_normal_settings jr-slider-options <?php if ('slider' != $instance['template'] && 'slider-overlay' != $instance['template']) { echo 'hidden'; } ?>">
+                    <?php _e('Slider Navigation Controls:', 'instagram-slider-widget'); ?>
+                    <br>
                     <label class="jr-radio"><input type="radio" id="<?php echo $this->get_field_id('controls'); ?>"
                                                    name="<?php echo $this->get_field_name('controls'); ?>"
                                                    value="prev_next" <?php checked('prev_next', $instance['controls']); ?> /> <?php _e('Prev & Next', 'instagram-slider-widget'); ?>
@@ -343,7 +378,8 @@ $w_id  = explode('-', $this->id)[1];
                                                    value="none" <?php checked('none', $instance['controls']); ?> /> <?php _e('No Navigation', 'instagram-slider-widget'); ?>
                     </label>
                     <br>
-                    <?php _e('Slider Animation:', 'instagram-slider-widget'); ?><br>
+                    <?php _e('Slider Animation:', 'instagram-slider-widget'); ?>
+                    <br>
                     <label class="jr-radio"><input type="radio" id="<?php echo $this->get_field_id('animation'); ?>"
                                                    name="<?php echo $this->get_field_name('animation'); ?>"
                                                    value="slide" <?php checked('slide', $instance['animation']); ?> /> <?php _e('Slide', 'instagram-slider-widget'); ?>
@@ -352,6 +388,7 @@ $w_id  = explode('-', $this->id)[1];
                                                    name="<?php echo $this->get_field_name('animation'); ?>"
                                                    value="fade" <?php checked('fade', $instance['animation']); ?> /> <?php _e('Fade', 'instagram-slider-widget'); ?>
                     </label>
+                    <br>
                     <br>
                     <label for="<?php echo $this->get_field_id('slidespeed'); ?>"><?php _e('Slide Speed:', 'instagram-slider-widget'); ?>
                         <input type="number" min="1000" step="100" class="small-text"

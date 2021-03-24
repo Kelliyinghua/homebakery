@@ -22,7 +22,7 @@ $accounts          = WIS_Plugin::app()->getPopulateOption( 'account_profiles', a
 $accounts_business = WIS_Plugin::app()->getPopulateOption( 'account_profiles_new', array() );
 $count_accounts    = count( $accounts ) + count( $accounts_business );
 ?>
-<div class="factory-bootstrap-444 factory-fontawesome-000">
+<div class="factory-bootstrap-445 factory-fontawesome-000">
     <div class="row">
         <div class="col-md-9">
             <div class="row">

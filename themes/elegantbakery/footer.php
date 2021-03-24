@@ -11,7 +11,35 @@
 
 ?>
 
-</div>
+	<div class="grid-x event">
+		<?php
+		$event_args = array(
+			'post_type'     => 'event',
+			'posts_per_page' => 3,
+		);
+
+		$event_query = new WP_Query($event_args);
+
+		if($event_query -> have_posts() ) {
+			while ($event_query->have_posts() ) {
+				$event_query->the_post();
+				?>
+				<div class="large-12">
+					<h2><a href="<?php the_permalink(); ?>">	<?php the_title()?></h2>
+					<div class="event_feature_image" style="float:left; width: 300px; max-with: 100%;"><?php the_post_thumbnail();?></div>
+					<?php the_excerpt(); ?>
+				</div>
+				<?php
+			}
+		}
+		?>
+	</div>
+
+	
+	
+
+</div> <!-- end of grid-container -->
+
 	<footer id="colophon" class="site-footer grid-x grid-padding-x">
 		<div class="grid-x cell large-12 small-12">
 			<div class="cell large-3 medium-6 footerLogoContainer">

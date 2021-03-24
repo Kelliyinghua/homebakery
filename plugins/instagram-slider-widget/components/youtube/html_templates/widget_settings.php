@@ -33,7 +33,7 @@ $instance       = $args['instance'];
 	                    ?>
 	                    </select><?php
                     } else {
-	                    echo "<a href='" . $this->plugin->getPluginPageUrl( 'settings' ) . "'>" . __( 'Add feed in settings', 'yft' ) . "</a>";
+	                    echo "<a href='/wp-admin/admin.php?page=settings-wisw&tab=Youtube'>" . __( 'Add feed in settings', 'yft' ) . "</a>";
                     }
                     ?>
                 </span>

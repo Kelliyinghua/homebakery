@@ -8,7 +8,7 @@ use Instagram\Includes\WIS_Plugin;
 $accounts       = WIS_Plugin::app()->getPopulateOption( WYT_ACCOUNT_OPTION_NAME, array() );
 $count_accounts = !empty($accounts) ? count($accounts) : 0 ;
 ?>
-<div class="factory-bootstrap-444 factory-fontawesome-000">
+<div class="factory-bootstrap-445 factory-fontawesome-000">
     <div class="row">
         <div class="col-md-9">
             <div class="row">

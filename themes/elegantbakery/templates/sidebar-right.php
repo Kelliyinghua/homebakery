@@ -1,15 +1,11 @@
 <?php
 /**
  * Template Name: Sidebar (right)
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * Template Post Type: post, page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Sample_Theme
+ * @package Elegantbakery_Theme
  */
 
 get_header();

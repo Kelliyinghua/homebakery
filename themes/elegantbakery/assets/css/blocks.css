@@ -28,7 +28,7 @@
     color: rgb(67, 52, 54);
 }
 
-.wp-block-quote.is-style-fancy-quote {
+.wp-block-quote .is-style-fancy-quote {
     color: #e79d71;
 }
 
@@ -49,6 +49,15 @@
     font-family: 'Lobster Two', cursive;
     color: rgb(67, 52, 54);
     
+}
+
+.wp-block-pullquote p {
+    color: rgb(67, 52, 54);
+    font-family: 'Lobster Two', cursive;
+}
+
+.wp-block-pullquote cite {
+    font-family: 'Cormorant', serif; 
 }
 
 .wp-block-pullquote .wp-block-pullquote__citation {
