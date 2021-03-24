@@ -14,44 +14,55 @@
 
 get_header();
 ?>
+<div class="grid-container">
+	<div class="grid-x">
+		<div class="small-12 medium-8 large-8">
 
-	<main id="primary" class="site-main">
+			<main id="primary" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
 				<?php
-			endif;
+				if ( have_posts() ) :
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+					if ( is_home() && ! is_front_page() ) :
+						?>
+						<header>
+							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+						</header>
+						<?php
+					endif;
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
 
-			endwhile;
+						/*
+						* Include the Post-Type-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+						*/
+						get_template_part( 'template-parts/content', get_post_type() );
 
-			the_posts_navigation();
+					endwhile;
 
-		else :
+					the_posts_navigation();
 
-			get_template_part( 'template-parts/content', 'none' );
+				else :
 
-		endif;
-		?>
+					get_template_part( 'template-parts/content', 'none' );
 
-	</main><!-- #main -->
+				endif;
+				?>
+			</main><!-- #main -->
+
+		</div><!-- large-8 medium-8 small-12 -->
+		
+		<div class="large-4 medium-4 small-12">
+			<?php get_sidebar(); ?>
+		</div><!-- large-4 medium-4 small-12 -->
+	
+	</div><!-- grid-x -->
+</div><!-- grid-container -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
