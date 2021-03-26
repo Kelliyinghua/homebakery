@@ -10,22 +10,31 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php elegantbakerytheme_post_thumbnail(); ?>
-
-	<div class="grid-x">
-		<div class="entry-content large-12 small-12">
-			<?php
-			the_content();
-
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'elegantbakerytheme' ),
-					'after'  => '</div>',
-				)
-			);
-			?>
-		</div><!-- .entry-content -->
-	</div>
+	<?php if(!is_page()){ ?>
+		<header class="entry-header">
+			<?php the_title('<h1 class="entry-title">' , '</h1>'); ?>
+		</header>
+	<?php } ?>
+	
+	<?php if (has_post_thumbnail()) { ?>
+		<div class="post-thumbnail">
+			<img src="<?php echo esc_url( get_the_post_thumbnail_url()); ?>">
+		</div>
+	<?php } ?> <!-- post-thumbnail end here -->	
+	
+	<div class="entry-content">
+		<?php
+		the_content();
+		
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'elegantbakerytheme' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	
+	</div><!-- .entry-content -->
 	
 
 	<?php if ( get_edit_post_link() ) : ?>
@@ -33,4 +42,5 @@
 			
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
+
 </article><!-- #post-<?php the_ID(); ?> -->

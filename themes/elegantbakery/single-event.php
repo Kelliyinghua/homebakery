@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying event single posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -10,10 +10,10 @@
 get_header();
 ?>
 
-	<div class="grid-x">
+	<div class="grid-x grid-padding-x grid-margin-x">
+		
 		<div class="small-12 medium-9 large-9">
 			<main id="primary" class="site-main">
-
 				<?php
 				while ( have_posts() ) :
 					the_post();
@@ -35,8 +35,9 @@ get_header();
 				endwhile; // End of the loop.
 				?>
 			</main><!-- #main -->
-		</div> <!-- large-8 ends -->
+		</div> <!-- post content (large-8) ends -->
 		
+
 		<div class="cell small-12 medium-3 large-3 custom-sidebar" style="height: 100%">
 			<?php get_sidebar();?>
 		</div>
@@ -46,6 +47,5 @@ get_header();
 	</div>
 
 <?php
-
-
 get_footer();
+

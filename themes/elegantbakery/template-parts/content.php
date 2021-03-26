@@ -9,11 +9,11 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="large-8">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<header class="entry-header">
 		<?php
 			if (!is_product() ) {
-				if ( is_singular() ) :
+				if ( is_single() && is_page_template('templates/sidebar-right.php') ) :
 					the_title( '<h1 class="entry-title entry-title-block-style">', '</h1>' );
 				else :
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -22,7 +22,7 @@
 
 			if ( 'post' === get_post_type() ) :
 				?>
-				<div class="entry-meta grid-x">
+				<div class="entry-meta ">
 					<?php
 					elegantbakerytheme_posted_on();
 					elegantbakerytheme_posted_by();
@@ -41,7 +41,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'elegantbakerytheme' ),
+					__( 'Read more...<span class="screen-reader-text"> "%s"</span>', 'elegantbakerytheme' ),
 					array(
 						'span' => array(
 							'class' => array(),

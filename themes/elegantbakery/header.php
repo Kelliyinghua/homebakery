@@ -75,26 +75,6 @@
 			
 		</div>
 		
-		
-		<!-- <div class="grid-x">	
-			<div class="cell large-12">
-				<?php if ( get_header_image() ) : ?>
-				<div id="site-header">
-					<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="350" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-					<h1><?php the_title()?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></h1></a>
-				</div>
-				<?php endif; ?>
-				<?php the_title( '<h1 class="entry-title entry-title-block-style">', '</h1>' ); ?>
-				<img alt="" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>">
-			</div> 
-			
-		</div>  -->
-
-		
-
-		
-
-		
 	</header><!-- #masthead -->
 
 	<div class="grid-container">

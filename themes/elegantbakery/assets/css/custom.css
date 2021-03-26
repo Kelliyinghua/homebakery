@@ -212,17 +212,40 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     border:none;
 }
 
-/* Post single *************************************/
 .post {
-    /* background: rgba(256,256,256,0.8);
-    padding: 4.3rem 8rem;
-    margin-top: 2rem;   
-    margin-bottom: 10rem;
-    border-radius: 0.7rem;
-    box-shadow: 1px 1px 5px rgb(148, 125, 128); */
+    margin-top: 1rem;   
+    margin-bottom: 1rem;
+    padding: 0 1.2rem 1rem;
 }
-.post-thumbnail {
-    width: 25%;
+
+/* Post title */
+.post > .entry-header > .entry-title > a {
+    color: var(--primary-color);
+}
+.post > .entry-header > .entry-title > a:hover {
+    color: var(--secondary-color);
+}
+
+.entry-meta span a {
+    color: var(--secondary-color);
+}
+.entry-meta span a:hover {
+    color: var(--primary-color);
+}
+
+.post-thumbnail img {
+    margin-top: 1rem;
+    /* width: 600px; */
+    max-width: 100%;
+}
+
+.entry-footer {
+    display: none;
+}
+/* Post single *************************************/
+
+.thumbnail-overlay {
+    /* background-color:rgba(67, 52, 54, 0.8); */
 }
 
 /* Custom Side Bar Styling  *************************/
@@ -533,5 +556,43 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 /* Custom Post type --- Event ***************************/
 
 .event {
-    padding: 0.5rem 0rem;
+    /* background-color: #f8f8f8; */
+    padding-bottom: 1rem;
+}
+
+					
+.event-footer-heading {
+    font-family: var(--main-font);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color:var(--primary-color);
+    border-bottom: 1px dashed var(--primary-color);
+    border-top: 1px dashed var(--primary-color);
+    background: #f8f8f8;
+}
+
+.event-subheading {
+    font-family: var(--secondary-font);
+}
+
+.event-subheading a {
+    color:var(--primary-color);
+    /* color:var(--secondary-color); */
+}
+
+.event-subheading a:visited {
+    color:var(--secondary-color);
+    /* color:var(--primary-color); */
+}
+
+
+.event_feature_image {
+    width: 150px; 
+    float: left;
+    margin-right:1rem;
+}
+.event_excerpt p {
+    margin-left: 1rem;
+    color:var(--primary-color);
 }

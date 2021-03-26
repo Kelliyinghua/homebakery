@@ -14,9 +14,9 @@
 
 get_header();
 ?>
-<div class="grid-container">
+
 	<div class="grid-x">
-		<div class="small-12 medium-8 large-8">
+		<div class="small-12 medium-8 large-8 blog-post-style">
 
 			<main id="primary" class="site-main">
 
@@ -61,7 +61,6 @@ get_header();
 		</div><!-- large-4 medium-4 small-12 -->
 	
 	</div><!-- grid-x -->
-</div><!-- grid-container -->
 
 <?php
 // get_sidebar();

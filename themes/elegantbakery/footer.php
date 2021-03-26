@@ -10,8 +10,12 @@
  */
 
 ?>
+	
+	<div class="event grid-x grid-padding-x">
+		<div class="large-12 small-12">
+			<h2 class="event-footer-heading">Events - Baking Class</h2>
+		</div>
 
-	<div class="grid-x event">
 		<?php
 		$event_args = array(
 			'post_type'     => 'event',
@@ -24,19 +28,28 @@
 			while ($event_query->have_posts() ) {
 				$event_query->the_post();
 				?>
-				<div class="large-12">
-					<h2><a href="<?php the_permalink(); ?>">	<?php the_title()?></h2>
-					<div class="event_feature_image" style="float:left; width: 300px; max-with: 100%;"><?php the_post_thumbnail();?></div>
-					<?php the_excerpt(); ?>
+				
+				<div class="grid-x cell large-6 small-12 event-footer-style">
+					
+					<h4 class="large-12 event-subheading">
+						<a href="<?php the_permalink(); ?>">
+						<?php the_title()?>
+					</h4>
+					
+					<div class="large-5 event_feature_image" >
+						<?php the_post_thumbnail();?>
+					</div>
+					<div class="large-7 event_excerpt">
+						<?php the_excerpt(); ?>
+					</div>
 				</div>
+
+				
 				<?php
 			}
 		}
 		?>
-	</div>
-
-	
-	
+	</div> <!-- end of custom post type - event -->
 
 </div> <!-- end of grid-container -->
 
@@ -80,6 +93,7 @@
 					printf( esc_html__( 'Theme: %1$s by %2$s.', 'elegantbakerytheme' ), 'elegantbakerytheme', '<a href="https://yinghua-li.com">kelly.li</a>' );
 					?>
 				</div>
+
 				<div class="cell large-4 small-5 float-right ">
 					<!--  social menu at footer -->
 					<?php

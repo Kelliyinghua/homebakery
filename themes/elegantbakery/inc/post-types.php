@@ -34,7 +34,7 @@ function elegantbakerytheme_init() {
     );     
     $args = array(
         'labels'             => $labels,
-        'description'        => 'E  vent custom post type.',
+        'description'        => 'Event custom post type.',
         'public'             => true,
         'publicly_queryable' => true,
         'show_ui'            => true,
