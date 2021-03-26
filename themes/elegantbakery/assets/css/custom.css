@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+body {
+    margin-bottom: 0 !important;
+}
+
+/* Seting the general style for all pages *******/
+:root {
+    --primary-color: #433436;
+    --secondary-color:#e79d71;
+    --tertiary-color:#947d80;
+    --quaternary-color: #fad1d0;
+    --main-font: 'Cormorant', serif; 
+    --secondary-font: 'Redressed', cursive;
+    --tertiary-font: 'Lobster',cursive;
+    --quaternary-font:  Arial, Helvetica, sans-serif;
+}
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: 'Cormorant', serif; 
+    color: var(--primary-color);  
+}
+
+#page {
+    background-color: #fff;
+}
+
+/* Alignment setting */
+.grid-container {
+    max-width: 80rem;
+}
+
+.alignwide {
+    margin-right: calc(50% - 45rem);
+    margin-left: calc(50% - 45rem);
+    width: 100vw;
+    max-width: 90rem;
+}
+
+.alignfull {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+    max-width: 100vw;
+}
+
+
+/* Headder background colour */
+.header-style {
+    text-align: center;
+    background: #f8f8f8;
+    box-shadow: 0px 2px 5px #ddd;
+}
+
+/* Site logo */
+.custom-logo {
+    margin-top: 1rem;
+    width: 100px;
+}
+
+/* Header site title style *************************/
+.site-title a {
+    color:var(--primary-color);
+}
+
+.site-title a:hover {
+    color: var(--secondary-color);
+}
+
+.site-description {
+    font-family: 'Redressed', cursive;
+    font-size: 1rem;
+    color:var(--tertiary-color);
+}
+
+
+/* Navigation styling  *************************/
+.menu-primary-menu-container {
+    display: flex;
+    justify-content: center;
+}
+
+#primary-menu {
+    flex: 1;
+    justify-content: center;
+}
+
+.menu-item {
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    font-family: 'Cormorant', serif;
+}
+
+.menu-item a {
+    color:var(--primary-color);
+}
+
+.menu a:hover, .menu .button:hover {
+    background:#e79c7144;
+    color:var(--tertiary-color);
+    font-weight: 700;
+
+}
+
+.site-nav-style {
+    border-top: var(--primary-color) 1px dashed;
+}
+
+/* Slider Style *************************/
+#gutenslider-bqpme7vrh {
+    height: 300px;
+}
+
+/* Footer background and styling  *************************************/
+.site-footer {
+    background: var(--primary-color);
+    color: white;
+    padding-top: 2.3rem;
+}
+
+.footer-title, 
+.footer-title p {
+    color: #fff;
+}
+
+.footerContainer {
+    color: #f8f8f8;
+    padding: 1.2rem 1rem;
+}
+
+/* Footer Logo styling */
+.footerLogoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-logo {
+    display: block;
+    width: 170px;
+}
+
+.site-info {
+    background: rgb(26, 26, 26);
+    padding: 1rem 2rem;
+    margin-top: 5rem;
+}
+
+/* Footer social menu styling */
+#social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#social > li {
+    padding: 0;
+}
+
+.menu-social-menu-container > #social > .menu-item > a {
+    font-size: 22px;
+    padding-top: 3px;
+    margin-top: 0;  
+}
+
+.menu-social-menu-container > #social > .menu-item > a:hover {
+    background: transparent;  
+}
+
+.menu-social-menu-container > #social > .menu-item > a > i {
+    color:#fff;
+}
+
+.menu-social-menu-container > #social > .menu-item > a > i:hover {
+    color:var(--secondary-color);
+}
+
+
+/* Footer copyright styling */
+.copyright > a:visited {
+    color: var(--secondary-color);
+}
+
+#footer-logo > .custom-logo {
+    width: 170px;
+}
+
+/* About Page *******************************************/
+.banner {
+    height: 350px;
+    background-color: #ddd;
+    background-image: url(../img/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blockquote {
+    border-left: 0px;
+}
+
+.blockquote, .blockquote p {
+    color: var(--tertiary-color);
+}
+/* social media */
+.jr-insta-thumb {
+    margin: 2rem 4rem;
+}
+
+/* Blog page *******************************************/
+.callout {
+    background-color: transparent;
+    border:none;
+}
+
+.post {
+    margin-top: 1rem;   
+    margin-bottom: 1rem;
+    padding: 0 1.2rem 1rem;
+}
+
+/* Post title */
+.post > .entry-header > .entry-title > a,
+.event > .entry-header > .entry-title > a {
+    color: var(--primary-color);
+}
+.post > .entry-header > .entry-title > a:hover,
+.event > .entry-header > .entry-title > a:hover {
+    color: var(--secondary-color);
+}
+
+.entry-meta span a {
+    color: var(--secondary-color);
+}
+.entry-meta span a:hover {
+    color: var(--primary-color);
+}
+
+.post-thumbnail img {
+    margin-top: 1rem;
+    /* width: 600px; */
+    max-width: 100%;
+}
+
+.entry-footer {
+    display: none;
+}
+
+
+/* contact us **************************/
+.wp-block-cover {
+    height: 100%;
+}
+
+#wsf-1-field-7 {
+    background-color: var(--secondary-color);
+    border: 1px white solid;
+    font-size: 1rem;
+}
+
+#wsf-1-field-7:hover  {
+    background-color: var(--tertiary-color);
+}
+
+#contact-us-p-tag {
+    padding: 1rem 7rem 2rem 7rem;
+    text-align: center;
+}
+
+
+
+/* Custom Side Bar Styling  *************************/
+.widget-area {
+    padding: 2rem 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: #f8f8f8;
+    font-family: var(--main-font);
+}
+
+.widget:not(:last-child) {
+    border-bottom: 1px dashed rgb(67, 52, 54);
+    padding-bottom: 1.5rem;
+}
+
+.widget-title {
+    font-size: 2.1rem;
+}
+
+.widget > ul {
+    list-style-type: circle;
+    /* margin-left: 0; */
+}
+
+.widget > ul > li {
+    line-height: 3;
+}
+
+.widget > ul > li > a {
+    color:var(--primary-color);
+}
+.widget > ul > li > a:visited {
+    color:var(--secondary-color);
+}
+
+/**  Below is the WooCommerce Features **/
+/* Product Archive Page *************************************/
+.woocommerce .products ul, .woocommerce ul.products  {
+    background: rgba(256,256,256,0.8);
+    box-shadow: 1px 1px 3px rgba(148, 125, 128,0.6);
+    padding: 2rem 4rem;
+}
+/* Price color & size */
+.woocommerce ul.products li.product .price {
+    color:rgb(67, 52, 54);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Add to cart button color */
+.woocommerce ul.products li.product .button {
+    background: rgb(231, 156, 113);
+    color:rgb(67, 52, 54);
+}
+
+.woocommerce ul.products li.product .button:hover {
+    background-color: rgba(67, 52, 54, 0.96);
+    color: rgb(231, 156, 113);
+}
+
+/* View Cart call to action (after click add to cart) */
+.woocommerce a.added_to_cart {
+    /* border: 1px solid #333; */
+    width: 142px;
+    padding: 0.2em;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    color:rgb(148,125,128);
+    background: #f1f1f1;
+}
+
+/* After added to cart message box style */
+.woocommerce-message {
+    border-top-color:rgb(148,125,128);
+}
+
+.woocommerce-message::before {
+    color:rgb(148,125,128);
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, 
+.woocommerce button.button, .woocommerce input.button {
+    background-color:rgb(231, 157, 113);
+    color:rgb(67, 52, 54);
+}
+
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
+.woocommerce button.button:hover, .woocommerce input.button:hover {
+    background-color:rgba(231, 156, 113, 0.5);
+    color:rgb(67, 52, 54);
+}
+
+
+/* Shop single ************************************************/
+.woocommerce div.product .product_title {
+    font-size: 2.3rem;
+}
+
+.woocommerce-product-details__short-description > p {
+    font-family: var(--quaternary-font);
+    font-size: 0.9rem;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price,
+.woocommerce div.product .stock {
+    color: #de5303;
+}
+
+.woocommerce div.product form.cart .button {
+    background-color: var(--secondary-color);
+    color:var(--primary-color);
+}
+.woocommerce div.product form.cart .button:hover {
+    color: var(--secondary-color);
+    background-color:var(--primary-color);
+}
+
+.posted_in > a {
+    color:var(--tertiary-color);
+}
+
+.posted_in > a:visited {
+    color:var(--secondary-color);
+}
+
+/* Description panels */
+.woocommerce div.product .woocommerce-tabs .panel {
+    background: rgba(256,256,256,0.8);
+    box-shadow: 1px 1px 3px rgba(148, 125, 128,0.6);
+    padding: 1.2rem 2rem;
+}
+
+#tab-description h2 {
+    font-size: 2rem;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    margin: 0;
+}
+.woocommerce-product-gallery__image {
+    padding: 0 0 2rem 0;
+}
+
+
+/* Related products */
+.related, .comments-area {
+    box-shadow: 1px 1px 3px rgba(148, 125, 128,0.6);
+    padding: 1rem 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.related > h2  {
+    font-size: 2.2rem;
+}
+.related > .woocommerce .products ul, .woocommerce ul.products  {
+    box-shadow: none;
+    padding: 0;
+}
+
+.nav-next > a, .nav-previous > a {
+    color: var(--primary-color); 
+    font-weight: 600;
+
+}
+.nav-next > a:hover, .nav-previous > a:hover {
+    color: var(--secondary-color);
+}
+
+/* Cart */
+
+.cart_totals h2 {
+    font-size: 1.8rem;
+}
+
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+    width:80%;
+}
+
+.product-name > a {
+    color: var(--primary-color);
+}
+.product-name > a:hover {
+    color: var(--secondary-color);
+}
+
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 2.3rem;
+}
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, 
+.woocommerce button.button.alt, .woocommerce input.button.alt {
+    background-color: var(--secondary-color);
+    color:var(--primary-color);
+}
+
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, 
+.woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+    background-color:var(--primary-color);
+    color:var(--secondary-color);
+    transition: all ease-in-out .25s;
+}
+/* My account page ************************************/
+
+/* My account page navigation style */
+.woocommerce-MyAccount-navigation {
+    background: rgba(255,255,255,0.6);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
+    font-family: var(--main-font);
+}
+.woocommerce-MyAccount-navigation ul{
+    list-style: none;
+    margin-right: 1rem;
+    margin-bottom: 10rem;
+}
+.woocommerce-MyAccount-navigation ul li{
+    margin-top: 2rem;
+    border-bottom: 1px rgba(148, 125, 128,0.6) solid;
+    color:rgb(67, 52, 54);
+    font-size: 1.2rem;
+}
+
+.woocommerce-MyAccount-navigation ul li a{
+    color:rgb(67, 52, 54);
+}
+
+.woocommerce-MyAccount-navigation ul li a:hover{
+    color:peru;
+}
+
+.woocommerce-MyAccount-content > p:first-child {
+    font-size: 2rem;
+}
+
+/* My account page content style */
+.woocommerce-MyAccount-content > p > a {
+    color: var(--secondary-color);
+}
+
+/* Downloads tab message box */
+.woocommerce-info {
+    border-top-color: var(--tertiary-color);
+}
+
+.woocommerce-info::before {
+    color: var(--tertiary-color);
+}
+
+/* checkout */
+
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+    background: rgba(256,256,256,0.8);
+    padding: 2rem 1rem;
+    box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
+    margin-bottom: 3rem;
+    border-radius: 5px;
+}
+
+#order_review_heading {
+    padding-left: 1rem;
+}
+
+#order_review {
+    padding: 2rem 1rem;
+    background:rgba(256,256,256,0.8);
+    box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
+    border-radius: 5px;
+}
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+    background:rgba(256,256,256,0.8);
+    box-shadow: 1px 1px 5px rgba(148, 125, 128,0.6);
+    padding: 2rem 1rem;
+}
+
+
+/* Login page */
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+    
+    background:rgba(256,256,256,0.8);   
+
+}
+
+.woocommerce form .form-row label {
+    font-family: 'Cormorant', serif; 
+    font-size: 1.3rem;
+}
+    
+/* Custom Post type --- Event ***************************/
+
+.event {
+    /* background-color: #f8f8f8; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+					
+.event-footer-heading {
+    font-family: var(--main-font);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color:var(--primary-color);
+    border-bottom: 1px dashed var(--primary-color);
+    border-top: 1px dashed var(--primary-color);
+    background: #f8f8f8;
+}
+
+.event-subheading {
+    font-family: var(--secondary-font);
+}
+
+.event-subheading a {
+    color:var(--primary-color);
+    /* color:var(--secondary-color); */
+}
+
+.event-subheading a:visited {
+    color:var(--secondary-color);
+    /* color:var(--primary-color); */
+}
+
+
+.event_feature_image {
+    width: 150px; 
+    max-width: 100%;
+    /* margin-right:1rem; */
+}
+.event_excerpt p {
+    margin-left: 1rem;
+    color:var(--primary-color);
+}
+
+
+/* Mobile view  */
+
+.mobile-navigation {
+    background:var(--primary-color);
+    color: white;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #site-navigation-mobile {
+        display: block;
+    }
+
+    .event-footer-style {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .event-mobile-style {
+        justify-content: center;
+    }
+
+    .widget-area {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #site-navigation-mobile {
+        display: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #site-navigation-mobile {
+        display: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #site-navigation-mobile {
+        display: none;
+    }
+}
