@@ -29,13 +29,13 @@
 				$event_query->the_post();
 				?>
 				
-				<div class="grid-x cell large-4 small-6 event-footer-style">
+				<div class="grid-x cell large-4 small-12 event-footer-style">
 					
 					<h4 class="large-12 event-subheading">
 						<a href="<?php the_permalink(); ?>">
 						<?php the_title()?>
 					</h4>
-					<div class="grid-x">
+					<div class="grid-x event-mobile-style">
 						<div class="cell large-4 event_feature_image" >
 							<?php the_post_thumbnail();?>
 						</div>
@@ -81,7 +81,7 @@
 
 		<!-- Site Info -->
 		<div class="site-info grid-x cell larger-12 small-12">
-			<div class="cell large-6  small-6 copyright">
+			<div class="cell large-6  small-12 copyright">
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'elegantbakerytheme' ) ); ?>">
 						<?php
 						/* translators: %s: CMS name, i.e. WordPress. */
@@ -99,7 +99,7 @@
 			</div><!-- copyright ends here -->
 			
 			
-			<div class="cell large-6 small-6 float-right ">
+			<div class="cell large-6 small-12 float-right ">
 				
 				<?php
 				if(has_nav_menu('menu-primary')) {
@@ -112,12 +112,7 @@
 				}
 				?>
 			</div><!--  Social menu ends here -->
-
-			<?php if (get_theme_mod('facebook_url')) { ?>
-				<a class="facebook-link" href="<?php echo get_theme_mod('facebook_url');?>">
-
-				</a>	
-			<?php } ?>
+			
 		</div>
 		<!-- .site-info -->
 			

@@ -57,20 +57,46 @@
 				</div>
 			</div><!-- .site-branding -->
 			
-			<!-- navigation starts here -->
+			<!-- #sit-navigation starts here -->
 			<div class="grid-x grid-padding-x site-nav-style">
 				<nav id="site-navigation" class="main-navigation large-12 small-12">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Desktop Horizontal Menu', 'elegantbakerytheme' ); ?></button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true">
+						<?php // esc_html_e( 'Mobile Menu', 'elegantbakerytheme' ); ?>
+					</button>
+					
 					<?php
-					if(has_nav_menu('footer')){
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-primary',
-							'menu_id'        => 'primary-menu',
-						)
-					);}
+						if(has_nav_menu('footer')){
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-primary',
+								'menu_id'        => 'primary-menu',
+							)
+						);}
 					?>
-				</nav><!-- #site-navigation -->
+				</nav>
+				<!-- #mobile-navigation -->
+				<nav id="site-navigation-mobile">
+					<div class="mobile-navigation large-12 small-12" data-responsive-toggle="example-menu" data-hide-for="medium">
+						<button class="menu-icon" type="button" data-toggle></button>
+					</div>
+
+					<div class="top-bar" id="example-menu" >
+						<div class="top-bar-left">
+							<ul class="dropdown menu" data-dropdown-menu>
+								<?php
+									if(has_nav_menu('footer')){
+									wp_nav_menu(
+										array(
+											'theme_location' => 'menu-primary',
+											'menu_id'        => 'primary-menu',
+										)
+									);}
+								?>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				
 			</div>
 			
 		</div>

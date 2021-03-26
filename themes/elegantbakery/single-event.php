@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<div class="grid-x grid-padding-x grid-margin-x">
+	<div class="grid-x">
 		
 		<div class="small-12 medium-9 large-9">
 			<main id="primary" class="site-main">
