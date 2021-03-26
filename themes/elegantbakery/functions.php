@@ -296,7 +296,7 @@ require get_template_directory() . '/inc/post-types.php';
 
 
 /**
- * Enqueinng block editor assets
+ * Enqueue block editor assets
  */
 function elegantbakerytheme_enqueue_block_editor_assets() {
 	wp_enqueue_script(
@@ -312,7 +312,7 @@ function elegantbakerytheme_enqueue_block_editor_assets() {
 add_action('enqueue_block_editor_assets','elegantbakerytheme_enqueue_block_editor_assets');
 
 /**
- * Enqueinng block assets which will load on front-end and back-end 
+ * Enqueue block assets which will load on front-end and back-end 
  */
 
 function elegantbakerytheme_enqueue_block_assets() {

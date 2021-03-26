@@ -52,7 +52,9 @@ get_header();
 
 				endif;
 				?>
+				
 			</main><!-- #main -->
+
 
 		</div><!-- large-8 medium-8 small-12 -->
 		

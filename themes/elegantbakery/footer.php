@@ -29,19 +29,21 @@
 				$event_query->the_post();
 				?>
 				
-				<div class="grid-x cell large-6 small-12 event-footer-style">
+				<div class="grid-x cell large-4 small-6 event-footer-style">
 					
 					<h4 class="large-12 event-subheading">
 						<a href="<?php the_permalink(); ?>">
 						<?php the_title()?>
 					</h4>
+					<div class="grid-x">
+						<div class="cell large-4 event_feature_image" >
+							<?php the_post_thumbnail();?>
+						</div>
+						<div class="cell large-8 event_excerpt">
+							<?php the_excerpt(); ?>
+						</div>
+					</div>
 					
-					<div class="large-5 event_feature_image" >
-						<?php the_post_thumbnail();?>
-					</div>
-					<div class="large-7 event_excerpt">
-						<?php the_excerpt(); ?>
-					</div>
 				</div>
 
 				
@@ -54,7 +56,8 @@
 </div> <!-- end of grid-container -->
 
 	<footer id="colophon" class="site-footer grid-x grid-padding-x">
-		<div class="grid-x cell large-12 small-12">
+		<!-- Footer Information Part -->
+		<div class="grid-x large-12 small-12">
 			<div class="cell large-3 medium-6 footerLogoContainer">
 				<div id="footer-logo">
 					<img src="<?php echo get_template_directory_uri();?>/assets/img/logo.svg" alt="homebakery logo">
@@ -76,44 +79,47 @@
 			</div>
 		</div>
 
-			<div class="site-info grid-x cell larger-12 small-12">
-				<div class="cell large-8  small-7 copyright">
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'elegantbakerytheme' ) ); ?>">
-					<?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'elegantbakerytheme' ), 'WordPress' );
-					?>
+		<!-- Site Info -->
+		<div class="site-info grid-x cell larger-12 small-12">
+			<div class="cell large-6  small-6 copyright">
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'elegantbakerytheme' ) ); ?>">
+						<?php
+						/* translators: %s: CMS name, i.e. WordPress. */
+						printf( esc_html__( 'Proudly powered by %s', 'elegantbakerytheme' ), 'WordPress' );
+						?>
 				</a>
-				
-					&copy; <?php echo gmdate('Y'); ?>
-				
+			
+				&copy; <?php echo gmdate('Y'); ?>
+			
 				<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'elegantbakerytheme' ), 'elegantbakerytheme', '<a href="https://yinghua-li.com">kelly.li</a>' );
-					?>
-				</div>
+				<?php
+				/* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'elegantbakerytheme' ), 'elegantbakerytheme', '<a href="https://yinghua-li.com">kelly.li</a>' );
+				?>
+			</div><!-- copyright ends here -->
+			
+			
+			<div class="cell large-6 small-6 float-right ">
+				
+				<?php
+				if(has_nav_menu('menu-primary')) {
+					wp_nav_menu(
+						array(
+							'theme_location' => 'footer',
+							'menu_id'        => 'social',
+						)
+					);
+				}
+				?>
+			</div><!--  Social menu ends here -->
 
-				<div class="cell large-4 small-5 float-right ">
-					<!--  social menu at footer -->
-					<?php
-					if(has_nav_menu('menu-primary')) {
-						wp_nav_menu(
-							array(
-								'theme_location' => 'footer',
-								'menu_id'        => 'social',
-							)
-						);
-					}
-					?>
-				</div>
-				<?php if (get_theme_mod('facebook_url')) { ?>
-					<a class="facebook-link" href="<?php echo get_theme_mod('facebook_url');?>">
+			<?php if (get_theme_mod('facebook_url')) { ?>
+				<a class="facebook-link" href="<?php echo get_theme_mod('facebook_url');?>">
 
-					</a>	
-				<?php } ?>
-			</div>
-			<!-- .site-info -->
+				</a>	
+			<?php } ?>
+		</div>
+		<!-- .site-info -->
 			
 	</footer><!-- #colophon -->
 </div><!-- #page -->

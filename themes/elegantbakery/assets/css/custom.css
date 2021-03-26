@@ -242,17 +242,35 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .entry-footer {
     display: none;
 }
-/* Post single *************************************/
 
-.thumbnail-overlay {
-    /* background-color:rgba(67, 52, 54, 0.8); */
+
+/* contact us **************************/
+.wp-block-cover {
+    height: 100%;
 }
+
+#wsf-1-field-7 {
+    background-color: var(--secondary-color);
+    border: 1px white solid;
+    font-size: 1rem;
+}
+
+#wsf-1-field-7:hover  {
+    background-color: var(--tertiary-color);
+}
+
+#contact-us-p-tag {
+    padding: 1rem 7rem 2rem 7rem;
+    text-align: center;
+}
+
+
 
 /* Custom Side Bar Styling  *************************/
 .widget-area {
     padding: 2rem 1.5rem;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 1rem;
     background-color: #f8f8f8;
     font-family: var(--main-font);
@@ -527,19 +545,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     padding: 2rem 1rem;
 }
 
-/* contact us */
-.wp-block-column {
-    width: 70%;
-}
-
-#wpforms-174 {
-    padding: 0 2rem;
-}
-
-#contact-us-p-tag {
-    padding: 1rem 7rem 2rem 7rem;
-    text-align: center;
-}
 
 /* Login page */
 .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
@@ -589,8 +594,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .event_feature_image {
     width: 150px; 
-    float: left;
-    margin-right:1rem;
+    max-width: 100%;
+    /* margin-right:1rem; */
 }
 .event_excerpt p {
     margin-left: 1rem;
